@@ -1,0 +1,37 @@
+contabilidadBundle\Entity\cuenta:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        numeroDeCuenta:
+            type: string
+            length: '100'
+        descripcion:
+            type: string
+            length: '200'
+        nivel:
+            type: integer
+        naturaleza:
+            type: string
+            length: '100'
+        grupo:
+            type: string
+            length: '100'
+        padre:
+            type: string
+            length: '100'
+        sat:
+            type: string
+            length: '30'
+        funcion:
+            type: string
+            length: '100'
+        mayor:
+            type: string
+            length: '100'
+    lifecycleCallbacks: {  }

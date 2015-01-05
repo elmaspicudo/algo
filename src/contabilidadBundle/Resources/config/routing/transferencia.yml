@@ -1,0 +1,30 @@
+transferencia:
+    path:     /
+    defaults: { _controller: "contabilidadBundle:transferencia:index" }
+
+transferencia_show:
+    path:     /{id}/show
+    defaults: { _controller: "contabilidadBundle:transferencia:show" }
+
+transferencia_new:
+    path:     /new
+    defaults: { _controller: "contabilidadBundle:transferencia:new" }
+
+transferencia_create:
+    path:     /create
+    defaults: { _controller: "contabilidadBundle:transferencia:create" }
+    requirements: { _method: post }
+
+transferencia_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "contabilidadBundle:transferencia:edit" }
+
+transferencia_update:
+    path:     /{id}/update
+    defaults: { _controller: "contabilidadBundle:transferencia:update" }
+    requirements: { _method: post|put }
+
+transferencia_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "contabilidadBundle:transferencia:delete" }
+    requirements: { _method: post|delete }

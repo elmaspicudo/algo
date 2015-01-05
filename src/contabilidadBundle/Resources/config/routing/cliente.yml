@@ -1,0 +1,30 @@
+cliente:
+    path:     /
+    defaults: { _controller: "contabilidadBundle:cliente:index" }
+
+cliente_show:
+    path:     /{id}/show
+    defaults: { _controller: "contabilidadBundle:cliente:show" }
+
+cliente_new:
+    path:     /new
+    defaults: { _controller: "contabilidadBundle:cliente:new" }
+
+cliente_create:
+    path:     /create
+    defaults: { _controller: "contabilidadBundle:cliente:create" }
+    requirements: { _method: post }
+
+cliente_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "contabilidadBundle:cliente:edit" }
+
+cliente_update:
+    path:     /{id}/update
+    defaults: { _controller: "contabilidadBundle:cliente:update" }
+    requirements: { _method: post|put }
+
+cliente_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "contabilidadBundle:cliente:delete" }
+    requirements: { _method: post|delete }

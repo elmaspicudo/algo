@@ -1,0 +1,22 @@
+facturacionBundle\Entity\producto:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nombre:
+            type: string
+            length: 255
+        descripcion:
+            type: string
+            length: 255
+        precio:
+            type: decimal
+        nombreCorto:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

@@ -1,0 +1,30 @@
+empresa:
+    path:     /
+    defaults: { _controller: "contabilidadBundle:empresa:index" }
+
+empresa_show:
+    path:     /{id}/show
+    defaults: { _controller: "contabilidadBundle:empresa:show" }
+
+empresa_new:
+    path:     /new
+    defaults: { _controller: "contabilidadBundle:empresa:new" }
+
+empresa_create:
+    path:     /create
+    defaults: { _controller: "contabilidadBundle:empresa:create" }
+    requirements: { _method: post }
+
+empresa_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "contabilidadBundle:empresa:edit" }
+
+empresa_update:
+    path:     /{id}/update
+    defaults: { _controller: "contabilidadBundle:empresa:update" }
+    requirements: { _method: post|put }
+
+empresa_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "contabilidadBundle:empresa:delete" }
+    requirements: { _method: post|delete }

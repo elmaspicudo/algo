@@ -1,0 +1,26 @@
+contabilidadBundle\Entity\transaccion:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        numCuenta:
+            type: string
+            length: '100'
+        concepto:
+            type: string
+            length: '300'
+        debe:
+            type: decimal
+        haber:
+            type: decimal
+        moneda:
+            type: string
+            length: '20'
+        tipoDeCambio:
+            type: decimal
+    lifecycleCallbacks: {  }

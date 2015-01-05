@@ -1,0 +1,33 @@
+contabilidadBundle\Entity\cheque:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        num:
+            type: string
+            length: '20'
+        banco:
+            type: string
+            length: '15'
+        cuentaOrigen:
+            type: string
+            length: '50'
+        fecha:
+            type: date
+        monto:
+            type: decimal
+        beneficiario:
+            type: string
+            length: '300'
+        rfc:
+            type: string
+            length: '13'
+        transaccion:
+            type: string
+            length: '100'    
+    lifecycleCallbacks: {  }

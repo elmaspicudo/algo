@@ -1,0 +1,21 @@
+contabilidadBundle\Entity\empresa:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        razonSocial:
+            type: string
+            length: '120'
+        rfc:
+            type: string
+            length: '14'
+        descripcion:
+            type: string
+            length: '255'       
+    lifecycleCallbacks: {  }
+

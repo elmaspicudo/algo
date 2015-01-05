@@ -1,0 +1,59 @@
+contabilidad_cuenta:
+    resource: "@contabilidadBundle/Resources/config/routing/cuenta.yml"
+    prefix:   /cuenta
+
+contabilidad_balanzas:
+    resource: "@contabilidadBundle/Resources/config/routing/balanzas.yml"
+    prefix:   /balanzas
+
+contabilidad_cuentas:
+    resource: "@contabilidadBundle/Resources/config/routing/cuentas.yml"
+    prefix:   /cuentas
+
+contabilidad_balanza:
+    resource: "@contabilidadBundle/Resources/config/routing/balanza.yml"
+    prefix:   /balanza
+
+contabilidad_polizas:
+    resource: "@contabilidadBundle/Resources/config/routing/polizas.yml"
+    prefix:   /polizas
+
+contabilidad_comprobantes:
+    resource: "@contabilidadBundle/Resources/config/routing/comprobantes.yml"
+    prefix:   /comprobantes
+
+contabilidad_transferencia:
+    resource: "@contabilidadBundle/Resources/config/routing/transferencia.yml"
+    prefix:   /transferencia
+
+contabilidad_transaccion:
+    resource: "@contabilidadBundle/Resources/config/routing/transaccion.yml"
+    prefix:   /transaccion
+
+contabilidad_poliza:
+    resource: "@contabilidadBundle/Resources/config/routing/poliza.yml"
+    prefix:   /poliza
+
+contabilidad_cheque:
+    resource: "@contabilidadBundle/Resources/config/routing/cheque.yml"
+    prefix:   /cheque
+
+contabilidad_factura:
+    resource: "@contabilidadBundle/Resources/config/routing/factura.yml"
+    prefix:   /factura
+
+contabilidad_empresa:
+    resource: "@contabilidadBundle/Resources/config/routing/empresa.yml"
+    prefix:   /empresa
+
+contabilidad_direccion:
+    resource: "@contabilidadBundle/Resources/config/routing/direccion.yml"
+    prefix:   /direccion
+
+contabilidad_cliente:
+    resource: "@contabilidadBundle/Resources/config/routing/cliente.yml"
+    prefix:   /cliente
+
+contabilidad_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: contabilidadBundle:Default:index }

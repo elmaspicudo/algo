@@ -1,0 +1,30 @@
+balanzas:
+    path:     /
+    defaults: { _controller: "contabilidadBundle:balanzas:index" }
+
+balanzas_show:
+    path:     /{id}/show
+    defaults: { _controller: "contabilidadBundle:balanzas:show" }
+
+balanzas_new:
+    path:     /new
+    defaults: { _controller: "contabilidadBundle:balanzas:new" }
+
+balanzas_create:
+    path:     /create
+    defaults: { _controller: "contabilidadBundle:balanzas:create" }
+    requirements: { _method: post }
+
+balanzas_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "contabilidadBundle:balanzas:edit" }
+
+balanzas_update:
+    path:     /{id}/update
+    defaults: { _controller: "contabilidadBundle:balanzas:update" }
+    requirements: { _method: post|put }
+
+balanzas_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "contabilidadBundle:balanzas:delete" }
+    requirements: { _method: post|delete }

@@ -1,0 +1,29 @@
+contabilidadBundle\Entity\cuentas:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        cliente:
+            type: string
+            length: 255
+        vercion:
+            type: string
+            length: 255
+        totalDeCuentas:
+            type: binary
+        mes:
+            type: string
+            length: '15'
+        año:
+            type: string
+            length: '4'
+    manyToOne:
+        cuenta:
+          targetEntity: contabilidadBundle\Entity\cuenta
+          inversedBy: cuentas        
+    lifecycleCallbacks: {  }

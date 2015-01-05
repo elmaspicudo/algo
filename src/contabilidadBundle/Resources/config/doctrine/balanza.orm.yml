@@ -1,0 +1,25 @@
+contabilidadBundle\Entity\balanza:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        cuenta:
+            type: binary
+        saldoInicial:
+            type: binary
+        debe:
+            type: binary
+        haber:
+            type: binary
+        saldoFinal:
+            type: binary
+    manyToOne:
+        balanzas:
+          targetEntity: contabilidadBundle\Entity\balanzas
+          inversedBy: balanza        
+    lifecycleCallbacks: {  }

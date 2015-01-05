@@ -1,0 +1,36 @@
+contabilidadBundle\Entity\transferencia:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        cuentaOrigen:
+            type: string
+            length: '50'
+        bancoOrigen:
+            type: string
+            length: '30'
+        monto:
+            type: decimal
+        cuentaDestino:
+            type: string
+            length: '50'
+        bancoDestino:
+            type: string
+            length: '30'
+        beneficiario:
+            type: string
+            length: '300'
+        fecha:
+            type: datetime
+        rfc:
+            type: string
+            length: '14'
+        transaccion:
+            type: string
+            length: '100'    
+    lifecycleCallbacks: {  }

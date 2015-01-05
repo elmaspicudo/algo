@@ -1,0 +1,26 @@
+contabilidadBundle\Entity\cliente:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nombre:
+            type: string
+            length: 255
+        uName:
+            type: string
+            length: 255
+        rfc:
+            type: string
+            length: '14'
+        mail:
+            type: string
+            length: '100'
+        password:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

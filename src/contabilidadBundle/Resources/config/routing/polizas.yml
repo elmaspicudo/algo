@@ -1,0 +1,30 @@
+polizas:
+    path:     /
+    defaults: { _controller: "contabilidadBundle:polizas:index" }
+
+polizas_show:
+    path:     /{id}/show
+    defaults: { _controller: "contabilidadBundle:polizas:show" }
+
+polizas_new:
+    path:     /new
+    defaults: { _controller: "contabilidadBundle:polizas:new" }
+
+polizas_create:
+    path:     /create
+    defaults: { _controller: "contabilidadBundle:polizas:create" }
+    requirements: { _method: post }
+
+polizas_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "contabilidadBundle:polizas:edit" }
+
+polizas_update:
+    path:     /{id}/update
+    defaults: { _controller: "contabilidadBundle:polizas:update" }
+    requirements: { _method: post|put }
+
+polizas_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "contabilidadBundle:polizas:delete" }
+    requirements: { _method: post|delete }

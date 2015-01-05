@@ -1,0 +1,23 @@
+facturacionBundle\Entity\archivos:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        cliente:
+            type: string
+            length: 255
+        tipo:
+            type: string
+            length: 255
+        nombre:
+            type: string
+            length: 255
+        contenido:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

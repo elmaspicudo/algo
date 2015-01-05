@@ -1,0 +1,53 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>cheque list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Num</th>
+                <th>Banco</th>
+                <th>Cuentaorigen</th>
+                <th>Fecha</th>
+                <th>Monto</th>
+                <th>Beneficiario</th>
+                <th>Rfc</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('cheque_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.num }}</td>
+                <td>{{ entity.banco }}</td>
+                <td>{{ entity.cuentaOrigen }}</td>
+                <td>{% if entity.fecha %}{{ entity.fecha|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ entity.monto }}</td>
+                <td>{{ entity.beneficiario }}</td>
+                <td>{{ entity.rfc }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('cheque_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('cheque_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('cheque_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

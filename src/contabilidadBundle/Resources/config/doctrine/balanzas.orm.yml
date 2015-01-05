@@ -1,0 +1,25 @@
+contabilidadBundle\Entity\balanzas:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        version:
+            type: string
+            length: '100'
+        rfc:
+            type: string
+            length: '14'
+        totalCuentas:
+            type: integer
+        mes:
+            type: string
+            length: '15'
+        año:
+            type: string
+            length: '4'
+    lifecycleCallbacks: {  }

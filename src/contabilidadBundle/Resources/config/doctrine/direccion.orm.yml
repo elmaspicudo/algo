@@ -1,0 +1,39 @@
+contabilidadBundle\Entity\direccion:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        calle:
+            type: string
+            length: '40'
+        noExterior:
+            type: string
+            length: '15'
+        noInterior:
+            type: string
+            length: '15'
+        colonia:
+            type: string
+            length: '40'
+        codigoPostal:
+            type: string
+            length: '10'
+        localidad:
+            type: string
+            length: '40'
+        referencia:
+            type: string
+            length: 255
+        municipio:
+            type: string
+            length: '30'
+        estado:
+            type: integer
+        pais:
+            type: integer
+    lifecycleCallbacks: {  }

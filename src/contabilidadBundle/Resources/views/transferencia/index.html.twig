@@ -1,0 +1,55 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>transferencia list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Cuentaorigen</th>
+                <th>Bancoorigen</th>
+                <th>Monto</th>
+                <th>Cuentadestino</th>
+                <th>Bancodestino</th>
+                <th>Beneficiario</th>
+                <th>Fecha</th>
+                <th>Rfc</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('transferencia_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.cuentaOrigen }}</td>
+                <td>{{ entity.bancoOrigen }}</td>
+                <td>{{ entity.monto }}</td>
+                <td>{{ entity.cuentaDestino }}</td>
+                <td>{{ entity.bancoDestino }}</td>
+                <td>{{ entity.beneficiario }}</td>
+                <td>{% if entity.fecha %}{{ entity.fecha|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ entity.rfc }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('transferencia_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('transferencia_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('transferencia_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

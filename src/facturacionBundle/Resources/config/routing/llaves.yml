@@ -1,0 +1,30 @@
+llaves:
+    path:     /
+    defaults: { _controller: "facturacionBundle:llaves:index" }
+
+llaves_show:
+    path:     /{id}/show
+    defaults: { _controller: "facturacionBundle:llaves:show" }
+
+llaves_new:
+    path:     /new
+    defaults: { _controller: "facturacionBundle:llaves:new" }
+
+llaves_create:
+    path:     /create
+    defaults: { _controller: "facturacionBundle:llaves:create" }
+    requirements: { _method: post }
+
+llaves_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "facturacionBundle:llaves:edit" }
+
+llaves_update:
+    path:     /{id}/update
+    defaults: { _controller: "facturacionBundle:llaves:update" }
+    requirements: { _method: post|put }
+
+llaves_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "facturacionBundle:llaves:delete" }
+    requirements: { _method: post|delete }

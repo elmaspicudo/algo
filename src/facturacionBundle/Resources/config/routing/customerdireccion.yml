@@ -1,0 +1,30 @@
+customerdireccion:
+    path:     /
+    defaults: { _controller: "facturacionBundle:customerDireccion:index" }
+
+customerdireccion_show:
+    path:     /{id}/show
+    defaults: { _controller: "facturacionBundle:customerDireccion:show" }
+
+customerdireccion_new:
+    path:     /new
+    defaults: { _controller: "facturacionBundle:customerDireccion:new" }
+
+customerdireccion_create:
+    path:     /create
+    defaults: { _controller: "facturacionBundle:customerDireccion:create" }
+    requirements: { _method: post }
+
+customerdireccion_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "facturacionBundle:customerDireccion:edit" }
+
+customerdireccion_update:
+    path:     /{id}/update
+    defaults: { _controller: "facturacionBundle:customerDireccion:update" }
+    requirements: { _method: post|put }
+
+customerdireccion_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "facturacionBundle:customerDireccion:delete" }
+    requirements: { _method: post|delete }

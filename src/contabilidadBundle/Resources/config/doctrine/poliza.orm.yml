@@ -1,0 +1,25 @@
+contabilidadBundle\Entity\poliza:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        tipo:
+            type: integer
+        numero:
+            type: string
+            length: '50'
+        fecha:
+            type: datetime
+        concepto:
+            type: string
+            length: '300'
+    manyToOne:
+        cliente:
+          targetEntity: contabilidadBundle\Entity\cliente
+          inversedBy: poliza        
+    lifecycleCallbacks: {  }

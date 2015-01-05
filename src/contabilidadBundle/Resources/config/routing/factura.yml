@@ -1,0 +1,30 @@
+factura:
+    path:     /
+    defaults: { _controller: "contabilidadBundle:factura:index" }
+
+factura_show:
+    path:     /{id}/show
+    defaults: { _controller: "contabilidadBundle:factura:show" }
+
+factura_new:
+    path:     /new
+    defaults: { _controller: "contabilidadBundle:factura:new" }
+
+factura_create:
+    path:     /create
+    defaults: { _controller: "contabilidadBundle:factura:create" }
+    requirements: { _method: post }
+
+factura_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "contabilidadBundle:factura:edit" }
+
+factura_update:
+    path:     /{id}/update
+    defaults: { _controller: "contabilidadBundle:factura:update" }
+    requirements: { _method: post|put }
+
+factura_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "contabilidadBundle:factura:delete" }
+    requirements: { _method: post|delete }

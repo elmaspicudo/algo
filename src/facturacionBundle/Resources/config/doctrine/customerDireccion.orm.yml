@@ -1,0 +1,45 @@
+facturacionBundle\Entity\customerDireccion:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        calle:
+            type: string
+            length: '30'
+        noExterior:
+            type: string
+            length: '15'
+        noInterior:
+            type: string
+            length: '15'
+        colonia:
+            type: string
+            length: '30'
+        codigoPostal:
+            type: string
+            length: '10'
+        localidad:
+            type: string
+            length: '30'
+        referencia:
+            type: string
+            length: 255
+        municipio:
+            type: string
+            length: '50'
+        estado:
+            type: string
+            length: '40'
+        pais:
+            type: string
+            length: '60'
+    manyToOne:
+        customer:
+          targetEntity: facturacionBundle\Entity\customer
+          inversedBy: customerDireccion        
+    lifecycleCallbacks: {  }

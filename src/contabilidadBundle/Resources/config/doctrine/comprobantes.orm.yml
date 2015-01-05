@@ -1,0 +1,22 @@
+contabilidadBundle\Entity\comprobantes:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        uuId:
+            type: string
+            length: '36'
+        monto:
+            type: decimal
+        rfc:
+            type: string
+            length: '13'
+        transaccion:
+            type: string
+            length: '100'      
+    lifecycleCallbacks: {  }

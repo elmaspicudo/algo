@@ -1,0 +1,30 @@
+direccion:
+    path:     /
+    defaults: { _controller: "contabilidadBundle:direccion:index" }
+
+direccion_show:
+    path:     /{id}/show
+    defaults: { _controller: "contabilidadBundle:direccion:show" }
+
+direccion_new:
+    path:     /new
+    defaults: { _controller: "contabilidadBundle:direccion:new" }
+
+direccion_create:
+    path:     /create
+    defaults: { _controller: "contabilidadBundle:direccion:create" }
+    requirements: { _method: post }
+
+direccion_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "contabilidadBundle:direccion:edit" }
+
+direccion_update:
+    path:     /{id}/update
+    defaults: { _controller: "contabilidadBundle:direccion:update" }
+    requirements: { _method: post|put }
+
+direccion_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "contabilidadBundle:direccion:delete" }
+    requirements: { _method: post|delete }

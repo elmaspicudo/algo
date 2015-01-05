@@ -1,0 +1,30 @@
+impuestos:
+    path:     /
+    defaults: { _controller: "facturacionBundle:impuestos:index" }
+
+impuestos_show:
+    path:     /{id}/show
+    defaults: { _controller: "facturacionBundle:impuestos:show" }
+
+impuestos_new:
+    path:     /new
+    defaults: { _controller: "facturacionBundle:impuestos:new" }
+
+impuestos_create:
+    path:     /create
+    defaults: { _controller: "facturacionBundle:impuestos:create" }
+    requirements: { _method: post }
+
+impuestos_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "facturacionBundle:impuestos:edit" }
+
+impuestos_update:
+    path:     /{id}/update
+    defaults: { _controller: "facturacionBundle:impuestos:update" }
+    requirements: { _method: post|put }
+
+impuestos_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "facturacionBundle:impuestos:delete" }
+    requirements: { _method: post|delete }

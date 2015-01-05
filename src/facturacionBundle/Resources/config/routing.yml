@@ -1,0 +1,23 @@
+facturacion_llaves:
+    resource: "@facturacionBundle/Resources/config/routing/llaves.yml"
+    prefix:   /llaves
+
+facturacion_archivos:
+    resource: "@facturacionBundle/Resources/config/routing/archivos.yml"
+    prefix:   /archivos
+
+facturacion_impuestos:
+    resource: "@facturacionBundle/Resources/config/routing/impuestos.yml"
+    prefix:   /impuestos
+
+facturacion_customerdireccion:
+    resource: "@facturacionBundle/Resources/config/routing/customerdireccion.yml"
+    prefix:   /customerdireccion
+
+facturacion_customer:
+    resource: "@facturacionBundle/Resources/config/routing/customer.yml"
+    prefix:   /customer
+
+facturacion_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: facturacionBundle:Default:index }

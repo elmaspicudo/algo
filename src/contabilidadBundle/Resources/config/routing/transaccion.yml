@@ -1,0 +1,30 @@
+transaccion:
+    path:     /
+    defaults: { _controller: "contabilidadBundle:transaccion:index" }
+
+transaccion_show:
+    path:     /{id}/show
+    defaults: { _controller: "contabilidadBundle:transaccion:show" }
+
+transaccion_new:
+    path:     /new
+    defaults: { _controller: "contabilidadBundle:transaccion:new" }
+
+transaccion_create:
+    path:     /create
+    defaults: { _controller: "contabilidadBundle:transaccion:create" }
+    requirements: { _method: post }
+
+transaccion_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "contabilidadBundle:transaccion:edit" }
+
+transaccion_update:
+    path:     /{id}/update
+    defaults: { _controller: "contabilidadBundle:transaccion:update" }
+    requirements: { _method: post|put }
+
+transaccion_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "contabilidadBundle:transaccion:delete" }
+    requirements: { _method: post|delete }

@@ -1,0 +1,16 @@
+contabilidadBundle\Entity\factura:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        total:
+            type: binary
+        uuID:
+            type: string
+            length: '50'
+    lifecycleCallbacks: {  }

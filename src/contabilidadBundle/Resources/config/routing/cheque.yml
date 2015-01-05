@@ -1,0 +1,30 @@
+cheque:
+    path:     /
+    defaults: { _controller: "contabilidadBundle:cheque:index" }
+
+cheque_show:
+    path:     /{id}/show
+    defaults: { _controller: "contabilidadBundle:cheque:show" }
+
+cheque_new:
+    path:     /new
+    defaults: { _controller: "contabilidadBundle:cheque:new" }
+
+cheque_create:
+    path:     /create
+    defaults: { _controller: "contabilidadBundle:cheque:create" }
+    requirements: { _method: post }
+
+cheque_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "contabilidadBundle:cheque:edit" }
+
+cheque_update:
+    path:     /{id}/update
+    defaults: { _controller: "contabilidadBundle:cheque:update" }
+    requirements: { _method: post|put }
+
+cheque_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "contabilidadBundle:cheque:delete" }
+    requirements: { _method: post|delete }

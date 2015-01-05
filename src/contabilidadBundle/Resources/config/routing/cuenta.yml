@@ -1,0 +1,30 @@
+cuenta:
+    path:     /
+    defaults: { _controller: "contabilidadBundle:cuenta:index" }
+
+cuenta_show:
+    path:     /{id}/show
+    defaults: { _controller: "contabilidadBundle:cuenta:show" }
+
+cuenta_new:
+    path:     /new
+    defaults: { _controller: "contabilidadBundle:cuenta:new" }
+
+cuenta_create:
+    path:     /create
+    defaults: { _controller: "contabilidadBundle:cuenta:create" }
+    requirements: { _method: post }
+
+cuenta_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "contabilidadBundle:cuenta:edit" }
+
+cuenta_update:
+    path:     /{id}/update
+    defaults: { _controller: "contabilidadBundle:cuenta:update" }
+    requirements: { _method: post|put }
+
+cuenta_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "contabilidadBundle:cuenta:delete" }
+    requirements: { _method: post|delete }

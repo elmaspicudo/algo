@@ -1,0 +1,44 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>polizas</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Version</th>
+                <td>{{ entity.version }}</td>
+            </tr>
+            <tr>
+                <th>Rfc</th>
+                <td>{{ entity.rfc }}</td>
+            </tr>
+            <tr>
+                <th>Mes</th>
+                <td>{{ entity.mes }}</td>
+            </tr>
+            <tr>
+                <th>Año</th>
+                <td>{{ entity.año }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('polizas') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('polizas_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}
