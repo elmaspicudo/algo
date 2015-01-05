@@ -33,6 +33,10 @@ class producto
      * @var string
      */
     private $nombreCorto;
+    /**
+     * @var string
+     */
+    private $unidadDeMedida;
 
 
     /**
@@ -113,27 +117,26 @@ class producto
     {
         return $this->precio;
     }
-
     /**
-     * Set nombreCorto
+     * Set unidadDeMedida
      *
-     * @param string $nombreCorto
+     * @param string $unidadDeMedida
      * @return producto
      */
-    public function setNombreCorto($nombreCorto)
+    public function setUnidadDeMedida($unidadDeMedida)
     {
-        $this->nombreCorto = $nombreCorto;
+        $this->unidadDeMedida = $unidadDeMedida;
 
         return $this;
     }
 
     /**
-     * Get nombreCorto
+     * Get unidadDeMedida
      *
      * @return string 
      */
-    public function getNombreCorto()
+    public function getUnidadDeMedida()
     {
-        return $this->nombreCorto;
+        return $this->unidadDeMedida;
     }
 }
