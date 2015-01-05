@@ -22,11 +22,14 @@ class balanzaController extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
+        $entity = new balanza();
+        $form   = $this->createCreateForm($entity);
 
         $entities = $em->getRepository('contabilidadBundle:balanza')->findAll();
 
         return $this->render('contabilidadBundle:balanza:index.html.twig', array(
             'entities' => $entities,
+            'formulario' => $form->createView(),
         ));
     }
     /**
