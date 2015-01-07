@@ -33,6 +33,10 @@ class producto
      * @var string
      */
     private $nombreCorto;
+    /**
+     * @var string
+     */
+    private $unidadDeMedida;
 
 
     /**
@@ -112,6 +116,28 @@ class producto
     public function getPrecio()
     {
         return $this->precio;
+    }
+    /**
+     * Set unidadDeMedida
+     *
+     * @param string $unidadDeMedida
+     * @return producto
+     */
+    public function setUnidadDeMedida($unidadDeMedida)
+    {
+        $this->unidadDeMedida = $unidadDeMedida;
+
+        return $this;
+    }
+
+    /**
+     * Get unidadDeMedida
+     *
+     * @return string 
+     */
+    public function getUnidadDeMedida()
+    {
+        return $this->unidadDeMedida;
     }
 
     /**

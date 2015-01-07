@@ -19,4 +19,7 @@ facturacionBundle\Entity\producto:
         nombreCorto:
             type: string
             length: 255
+        unidadDeMedida:
+            type: string
+            length: 255    
     lifecycleCallbacks: {  }
