@@ -34,7 +34,11 @@ class poliza
      */
     private $concepto;
 
-    protected $cliente;
+ 
+    /**
+     * @var \contabilidadBundle\Entity\polizas
+     */
+    private $polizas;
     /**
      * Get id
      *
@@ -136,31 +140,35 @@ class poliza
     {
         return $this->concepto;
     }
+   
+
+    public function __toString()
+    {
+        return $this->id; 
+    }
+    
+
+
     /**
-     * Set cliente
+     * Set polizas
      *
-     * @param \contabilidadBundle\Entity\cliente $cliente
+     * @param \contabilidadBundle\Entity\polizas $polizas
      * @return poliza
      */
-    public function setCliente(\contabilidadBundle\Entity\cliente $cliente = null)
+    public function setPolizas(\contabilidadBundle\Entity\polizas $polizas = null)
     {
-        $this->cliente = $cliente;
+        $this->polizas = $polizas;
 
         return $this;
     }
 
     /**
-     * Get cliente
+     * Get polizas
      *
-     * @return \contabilidadBundle\Entity\cliente 
+     * @return \contabilidadBundle\Entity\polizas 
      */
-    public function getCliente()
+    public function getPolizas()
     {
-        return $this->cliente;
-    }
-
-    public function __toString()
-    {
-        return $this->cliente; 
+        return $this->polizas;
     }
 }

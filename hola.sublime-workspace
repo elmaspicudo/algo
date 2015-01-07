@@ -1,0 +1,695 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"bac",
+				"background-image"
+			],
+			[
+				"base",
+				"base64_decode"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"poliza",
+				"polizas"
+			],
+			[
+				"pol",
+				"poliza"
+			],
+			[
+				"uns",
+				"unset"
+			],
+			[
+				"jso",
+				"json_encode"
+			],
+			[
+				"h",
+				"href	Attr"
+			],
+			[
+				"sel",
+				"selecter"
+			],
+			[
+				"st",
+				"style	Tag"
+			],
+			[
+				"dis",
+				"display"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"ini",
+				"ini_set"
+			],
+			[
+				"pr",
+				"print"
+			],
+			[
+				"union",
+				"UNION"
+			],
+			[
+				"on",
+				"onchange	Attr"
+			],
+			[
+				"onc",
+				"onclick	Attr"
+			],
+			[
+				"al",
+				"alert"
+			],
+			[
+				"str_r",
+				"str_replace"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"rda",
+				"redata"
+			],
+			[
+				"error_",
+				"error_reporting"
+			],
+			[
+				"me",
+				"Meses"
+			],
+			[
+				"str_",
+				"str_replace"
+			],
+			[
+				"par",
+				"parseInt"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"prin",
+				"print_r"
+			],
+			[
+				"els",
+				"else"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+		],
+		"width": 440.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/var/www/html/esisnet/src/adminBundle/Entity/productoContratadoRepository.php",
+		"/var/www/html/esisnet/src/dscorpBundle/Resources/config/doctrine/empresa.orm.yml",
+		"/var/www/html/esisnet/src/dscorpBundle/Form/empresaType.php",
+		"/media/mike/DatosMk/manejo de git.txt",
+		"/var/www/html/esisnet/src/dscorpBundle/Resources/views/empresa/index.html.twig",
+		"/var/www/html/esisnet/src/adminBundle/Resources/views/Default/index.html.twig",
+		"/var/www/html/esisnet/src/dscorpBundle/Controller/direccionController.php",
+		"/var/www/html/esisnet/src/dscorpBundle/Resources/views/empresa/show.html.twig",
+		"/var/www/html/esisnet/src/dscorpBundle/Resources/config/doctrine/direccion.orm.yml",
+		"/var/www/html/esisnet/src/dscorpBundle/Resources/views/empresa/new.html.twig",
+		"/var/www/html/esisnet/src/dscorpBundle/Entity/empresa.php",
+		"/var/www/html/esisnet/src/dscorpBundle/Form/direccionType.php",
+		"/var/www/html/esisnet/src/dscorpBundle/Entity/direccion.php",
+		"/var/www/html/esisnet/src/dscorpBundle/Entity/municipio.php",
+		"/var/www/html/esisnet/src/dscorpBundle/Controller/empresaController.php",
+		"/home/mike/Descargas/startbootstrap-sb-admin-1.0.1/forms.html",
+		"/var/www/html/esisnet/src/dscorpBundle/Controller/entidadController.php",
+		"/var/www/html/esisnet/src/cartBundle/Resources/views/carrito/pagar.html.twig",
+		"/var/www/html/esisnet/src/adminBundle/Entity/productoContratado.php",
+		"/var/www/html/esisnet/src/adminBundle/Controller/DefaultController.php",
+		"/var/www/html/esisnet/src/adminBundle/Resources/config/routing.yml",
+		"/var/www/html/esisnet/app/Resources/views/base_admin.html.twig",
+		"/var/www/html/tecnoacount/app/Resources/views/base.html.twig",
+		"/var/www/html/seatcrm/seatcrm/app/config/security.yml",
+		"/var/www/html/esisnet/app/config/security.yml",
+		"/var/www/html/tecnoacount/src/contabilidadBundle/Form/balanzaType.php",
+		"/var/www/html/tecnoacount/src/contabilidadBundle/Resources/views/balanza/new.html.twig",
+		"/home/mike/Descargas/Bootstrap_Metro_Dashboard-master/form.html",
+		"/var/www/html/esisnet/src/cartBundle/Resources/views/carrito/show.html.twig",
+		"/var/www/html/tecnoacount/src/contabilidadBundle/Controller/balanzaController.php",
+		"/var/www/html/tecnoacount/src/contabilidadBundle/Resources/views/balanza/index.html.twig",
+		"/var/www/html/tecnoacount/src/contabilidadBundle/Form/balanzasType.php",
+		"/var/www/html/tecnoacount/src/contabilidadBundle/Resources/views/balanza/show.html.twig",
+		"/var/www/html/esisnet/src/dscorpBundle/Controller/DefaultController.php",
+		"/var/www/html/esisnet/src/cartBundle/Resources/views/itemCarrito/show.html.twig",
+		"/var/www/html/melior/index.php",
+		"/var/www/html/esisnet/src/cartBundle/Controller/carritoController.php",
+		"/var/www/html/esisnet/src/cartBundle/Entity/itemCarritoRepository.php",
+		"/var/www/html/esisnet/src/cartBundle/Controller/PaypalController.php",
+		"/var/www/html/esisnet/src/dscorpBundle/Entity/periodo.php",
+		"/var/www/html/esisnet/src/dscorpBundle/Entity/renta.php",
+		"/var/www/html/esisnet/src/cartBundle/Resources/config/doctrine/itemCarrito.orm.yml",
+		"/var/www/html/esisnet/src/cartBundle/Entity/itemCarrito.php",
+		"/var/www/html/esisnet/src/dscorpBundle/Controller/usuarioController.php",
+		"/var/www/html/esisnet/src/pagosBundle/Entity/pago.php",
+		"/var/www/html/esisnet/src/cartBundle/Controller/itemCarritoController.php",
+		"/var/www/html/esisnet/src/cartBundle/Entity/carrito.php",
+		"/home/mike/Descargas/startbootstrap-sb-admin-1.0.1/blank-page.html",
+		"/var/www/html/esisnet/src/pagosBundle/Entity/detallePago.php",
+		"/var/www/html/esisnet/src/adminBundle/Resources/config/doctrine/productoContratado.orm.yml",
+		"/var/www/html/esisnet/src/dscorpBundle/Entity/rol.php",
+		"/var/www/html/seatcrm/seatcrm/src/L2a/CustomerBundle/Entity/Customer.php",
+		"/var/www/html/seatcrm/seatcrm/web/l/vw.php",
+		"/var/www/html/esisnet/src/dscorpBundle/Entity/pais.php",
+		"/var/www/html/esisnet/src/pagosBundle/Resources/config/doctrine/pago.orm.yml",
+		"/var/www/html/esisnet/src/pagosBundle/Resources/config/doctrine/detallePago.orm.yml",
+		"/var/www/html/esisnet/src/cartBundle/Entity/itemCarrito.php~",
+		"/var/www/html/melior/ventas/guardar.php",
+		"/var/www/html/esisnet/src/cartBundle/Resources/config/routing/paypal.yml",
+		"/var/www/html/esisnet/src/dscorpBundle/Entity/entidad.php",
+		"/var/www/html/esisnet/src/dscorpBundle/Entity/statusCompra.php",
+		"/var/www/html/esisnet/src/dscorpBundle/Entity/historialPagos.php",
+		"/var/www/html/esisnet/src/dscorpBundle/Resources/config/doctrine/renta.orm.yml",
+		"/var/www/html/seatcrm/seatcrm/src/L2a/CampaignBundle/Controller/CampaignController.php",
+		"/var/www/html/seatcrm/seatcrm/src/L2a/CustomerBundle/Entity/CustomerRepository.php",
+		"/var/www/html/esisnet/src/cartBundle/Resources/config/routing/carrito.yml",
+		"/var/www/html/esisnet/src/dscorpBundle/Resources/views/usuario/registro.html.twig",
+		"/var/www/html/esisnet/src/cartBundle/Resources/views/carrito/index.html.twig",
+		"/var/www/html/esisnet/app/config/routing.yml",
+		"/var/www/html/esisnet/app/config/config.yml",
+		"/var/www/html/esisnet/src/cartBundle/Resources/config/routing.yml",
+		"/var/www/html/seatcrm/seatcrm/web/l/uv.php",
+		"/var/www/html/esisnet/src/cartBundle/Resources/config/doctrine/carrito.orm.yml",
+		"/var/www/html/esisnet/src/dscorpBundle/Entity/usuario.php",
+		"/var/www/html/seatcrm/seatcrm/src/L2a/UserBundle/Entity/Rol.php",
+		"/var/www/html/esisnet/src/dscorpBundle/Controller/SecurityController.php",
+		"/var/www/html/esisnet/app/config/services.yml",
+		"/var/www/html/esisnet/app/config/parameters.yml",
+		"/var/www/html/seatcrm/seatcrm/composer.json",
+		"/var/www/html/melior/ventas/confirm.php",
+		"/var/www/html/melior/ventas/errorPaypal.php",
+		"/var/www/html/melior/ventas/paypalipn.php",
+		"/var/www/html/esisnet/src/cartBundle/Controller/DefaultController.php",
+		"/var/www/html/melior/.htaccess",
+		"/var/www/html/seatcrm/seatcrm/app/AppKernel.php",
+		"/var/www/html/esisnet/app/AppKernel.php",
+		"/var/www/html/esisnet/src/cartBundle/Resources/views/itemCarrito/index.html.twig",
+		"/var/www/html/melior/lib/carrito.class.php",
+		"/var/www/html/melior/registro.php",
+		"/var/www/html/melior/ventas/sistema/lib/bd.php",
+		"/var/www/html/melior/administrar/sistema/lib/bd.php",
+		"/var/www/html/melior/paypalipn.php",
+		"/var/www/html/melior/send.php",
+		"/var/www/html/melior/tmplt/lib/registro.php",
+		"/var/www/html/melior/submenu.php",
+		"/var/www/html/melior/verifica.php",
+		"/var/www/html/melior/tmplt/registro.php",
+		"/var/www/html/melior/index.html",
+		"/var/www/html/melior/productos.php",
+		"/var/www/html/esisnet/src/dscorpBundle/Resources/config/routing/usuario.yml",
+		"/var/www/html/ecomerce/vendor/elcodi/cart/Entity/Interfaces/CartInterface.php",
+		"/var/www/html/esisnet/src/dscorpBundle/Resources/config/doctrine/usuario.orm.yml",
+		"/var/www/html/seatcrm/seatcrm/src/L2a/UserBundle/Entity/User.php",
+		"/var/www/html/esisnet/app/Resources/views/base.html.twig",
+		"/var/www/html/esisnet/src/AppBundle/Controller/DefaultController.php",
+		"/var/www/html/esisnet/src/AppBundle/Resources/public/css/main.css",
+		"/var/www/html/ecomerce/vendor/elcodi/cart/Entity/Abstracts/AbstractLine.php",
+		"/var/www/html/esisnet/src/AppBundle/Resources/views/Default/index.html.twig",
+		"/var/www/html/ecomerce/vendor/elcodi/cart/Entity/Interfaces/OrderLineInterface.php",
+		"/var/www/html/esisnet/composer.json",
+		"/var/www/html/seatcrm/seatcrm/src/L2a/CustomerBundle/Resources/views/Customer/new.html.twig",
+		"/var/www/html/esisnet/src/dscorpBundle/Form/usuarioType.php",
+		"/var/www/html/esisnet/src/dscorpBundle/Resources/views/security/login.html.twig",
+		"/var/www/html/esisnet/src/dscorpBundle/Form/login.html.twig",
+		"/var/www/html/esisnet/src/dscorpBundle/Resources/config/services.yml",
+		"/var/www/html/esisnet/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Model/UserInterface.php",
+		"/var/www/html/esisnet/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.es.yml",
+		"/var/www/html/esisnet/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.es.yml",
+		"/var/www/html/esisnet/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Validator/Initializer.php",
+		"/var/www/html/esisnet/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Model/User.php",
+		"/var/www/html/esisnet/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/config/doctrine/User.orm.xml",
+		"/var/www/html/esisnet/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Controller/RegistrationController.php",
+		"/var/www/html/esisnet/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Form/Type/RegistrationFormType.php",
+		"/var/www/html/esisnet/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/views/Registration/register_content.html.twig",
+		"/var/www/html/esisnet/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Model/UserManager.php",
+		"/var/www/html/esisnet/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Entity/User.php",
+		"/var/www/html/esisnet/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Doctrine/UserManager.php",
+		"/var/www/html/esisnet/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/views/Registration/register.html.twig"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/var/www/html/directores/encuestas",
+			"/var/www/html/directores",
+			"/var/www/html/directores/encuestas",
+			"/var/www/html/directores/",
+			"/var/www/html/directores/encuestas",
+			"/var/www/html/directores",
+			"/var/www/html/warriors",
+			"/var/www/html/directores/encuestas",
+			"/var/www/html/directores/",
+			"/var/www/html/directores/encuestas/",
+			"/var/www/html/directores/encuestas/application"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"des",
+			"productoContratado",
+			"empresa",
+			"formDireccion",
+			"municipio",
+			"empresa",
+			"formDireccion",
+			"form.",
+			"createCreateForm",
+			"!",
+			"href",
+			"/js",
+			"jsj",
+			"csscss",
+			"img",
+			"imgimg",
+			".css",
+			"js\"",
+			"src=\"js/",
+			"src=\"img/",
+			"href=\"",
+			"body",
+			"setSecurePassword",
+			"Assert",
+			"CantidadPeriodo",
+			"total",
+			"__toString",
+			"cantidadPeriodo",
+			"carrito",
+			"producto",
+			"status",
+			"usuario",
+			"createCreateForm",
+			"userRoles",
+			"addUserRole",
+			"}\n",
+			"userRoles",
+			"email",
+			"uname",
+			"ingrese una dirección de correo",
+			"canonicalizeEmail",
+			"email",
+			"password",
+			"uname",
+			"una",
+			"email",
+			"getUsername",
+			" </p>",
+			"<p>",
+			"itemCarrito",
+			"setSecurePassword",
+			"img ",
+			"ime",
+			"bundles/",
+			"insert",
+			"inserrt",
+			"cat_municipio",
+			"`",
+			",)",
+			"`pais_id`,`descripcion`",
+			"`cat_estado` ",
+			"`edo_id`, `nombre`, `nom_abr`, `cve_alfa`, `cve_cap`, `nom_cap`, `ptot`, `pmas`, `pfem`, `vtot`",
+			"anteriormente",
+			"Salt",
+			"TABLE",
+			"tabla",
+			"</option>",
+			"\">",
+			"<option value=\"",
+			"\">",
+			"<option value=\"",
+			"</option>",
+			"\">",
+			",'",
+			"<option value=\"",
+			"contraseña",
+			"login",
+			"`",
+			"transaccion",
+			"$dom",
+			"> <",
+			"  ",
+			"   ",
+			"                                           ",
+			"               ",
+			"insert",
+			"_insert",
+			".'\"'",
+			"'\"'.",
+			"\"'\"",
+			"formdata",
+			".\"'\"",
+			"\"'\".",
+			"comboLocalidad",
+			"comboPlanteles",
+			"comboLocalidad",
+			"_getListaCombo",
+			"comboLocalidad",
+			"_getUsuario",
+			"_InfoUsuario",
+			"_InfoListas",
+			"LBPLogin",
+			"insert",
+			"sexos",
+			"estadoCivil",
+			"update",
+			"INSERT",
+			"rewrite",
+			"mod_rewrite",
+			"mod_rewrite ",
+			"DMSServicio",
+			"que",
+			"dpd020229",
+			"dpd010653",
+			"dpd010581",
+			"ag2b9a",
+			"dpd010644",
+			"_set_crea_password",
+			"port",
+			"_set_actualiza",
+			"actu",
+			"inser",
+			"_set_actualiza",
+			"update",
+			"`",
+			"apaterno",
+			"addGroup",
+			"`"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"form",
+			"formDireccion.",
+			"src",
+			"/js/",
+			"/js",
+			"js/j",
+			"js/",
+			"css",
+			"') }}",
+			".css') }}",
+			"js') }}\"",
+			"href=\"{{ asset('bundles/contabilidad/js",
+			"href=\"{{ asset('bundles/contabilidad/img",
+			"href=\"{{ asset('bundles/contabilidad/css",
+			"{{ asset('bundles/contabilidad/css",
+			"PlainPassword",
+			"",
+			"bundles/app/",
+			"",
+			",1)",
+			"descripcion, pais_id",
+			"estado",
+			"`id`,`pais_id`,`descripcion`",
+			"regimenFiscal",
+			"giros",
+			"');\n  ",
+			",'",
+			"INSERT INTO tabla(id,descripcion)VALUES( ",
+			",'\n ",
+			"INSERT INTO tabla(id,descripcion)VALUES(\n ",
+			"');\n ",
+			",'",
+			"",
+			"INSERT INTO TABLE(id,descripcion)VALUES(",
+			"",
+			"$this->xml",
+			"><",
+			"",
+			"'\"'",
+			"",
+			"_m",
+			"_f",
+			"b_h",
+			"b_m",
+			"b_M",
+			"semestre1_c_m",
+			"c_h",
+			"{$Etiqueta}",
+			"",
+			"8_d_m",
+			"7_d_m",
+			"6_d_m",
+			"5_d_m",
+			"4_d_m",
+			"3_d_m",
+			"6_d_h",
+			"5_d_h",
+			"4_d_h",
+			"3_d_h",
+			"2_d_h",
+			"1_d_h",
+			"c_m",
+			"1_c_m",
+			"2_c_h",
+			"1_c_h",
+			"8_b_m",
+			"7_b_m",
+			"6_b_m",
+			"5_b_m",
+			"4_b_m",
+			"3_b_m",
+			"2_b_m",
+			"7_b_m",
+			"6_b_m",
+			"5_b_m",
+			"4_b_m",
+			"3_b_m",
+			"2_b_m",
+			"1_b_m",
+			"8_b",
+			"7_b",
+			"6_b",
+			"5_b",
+			"4_b",
+			"3_b",
+			"2_b",
+			"1_b",
+			"semestre5_a_m",
+			"semestre5_a_h",
+			"semestre4_a_h",
+			"semestre3_a_h",
+			"semestre2_a",
+			"semestre1_a",
+			"semestre3",
+			"semestre2",
+			"semestre3",
+			"semestre2",
+			"_d",
+			"_c",
+			"_b",
+			"sm-1",
+			"style=\"width:27px; height:27px;\"",
+			"style=\"width:<?php echo $iconsize;?>; height:<?php echo $iconsize;?>;\"",
+			"name",
+			"\".$_IdAmigo.\"",
+			"20",
+			"50B1B7",
+			"f1f2f7",
+			"{$llave.tpoid}",
+			".width()-80",
+			".width()-60",
+			".width()-20",
+			"$unaUrl",
+			"",
+			"\".$_IdAmigo.\"",
+			"\"",
+			"DATOSIND_d",
+			"DATOSIND_c",
+			"DATOSIND_b",
+			" <div class=\"col-sm-2\">\n                                    <div class=\"form-group\">\n                                        <label class=\"control-label\">Hombres</label>\n                                    </div>\n                                </div>\n\n                                <div class=\"col-sm-2\">\n                                    <div class=\"form-group\">                                        \n                                        <input type=\"text\" disabled class=\"form-control\" id=\"Nombre\" name=\"usuario[Nombre]\" value=\"{$DATOSIND_a.0.semestre1}\" onfocus=\"this.blur();\"/>\n                                    </div>\n                                </div>\n                                <div class=\"col-sm-2\">\n                                    <div class=\"form-group\">\n                                        <input type=\"text\" disabled class=\"form-control\" id=\"ApellidoP\" name=\"usuarioinfo[ap]\" value=\"{$DATOSIND_a.0.semestre2}\" onfocus=\"this.blur();\"/>\n                                    </div>\n                                </div>\n                                <div class=\"col-sm-2\">\n                                    <div class=\"form-group\">\n                                        <input type=\"text\" disabled class=\"form-control\" id=\"ApellidoP\" name=\"usuarioinfo[ap]\" value=\"{$DATOSIND_a.0.semestre3}\" onfocus=\"this.blur();\"/>\n                                    </div>\n                                </div>",
+			"<div class=\"col-sm-2\">\n                                    <div class=\"form-group\">\n                                        <label class=\"control-label\">Mujeres</label>\n                                    </div>\n                                </div>\n\n                                <div class=\"col-sm-2\">\n                                    <div class=\"form-group\">                                        \n                                        <input type=\"text\" disabled class=\"form-control\" id=\"Nombre\" name=\"usuario[Nombre]\" value=\"{$DATOSIND_a.1.semestre1}\" onfocus=\"this.blur();\" />\n                                    </div>\n                                </div>\n                                <div class=\"col-sm-2\">\n                                    <div class=\"form-group\">\n                                        <input type=\"text\" disabled class=\"form-control\" id=\"ApellidoP\" name=\"usuarioinfo[ap]\" value=\"{$DATOSIND_a.1.semestre2}\" onfocus=\"this.blur();\"/>\n                                    </div>\n                                </div>\n                                <div class=\"col-sm-2\">\n                                    <div class=\"form-group\">\n                                        <input type=\"text\" disabled class=\"form-control\" id=\"ApellidoP\" name=\"usuarioinfo[ap]\" value=\"{$DATOSIND_a.1.semestre3}\" onfocus=\"this.blur();\"/>\n                                    </div>\n                                </div>",
+			"$DATOSIND_a.1.semestre3",
+			"$DATOSIND_a.1.semestre2",
+			"$DATOSIND_a.0.semestre3",
+			"$DATOSIND_a.0.semestre2",
+			"col-sm-2"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "hola.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 194.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

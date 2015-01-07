@@ -16,9 +16,9 @@ class polizasType extends AbstractType
     {
         $builder
             ->add('version')
-            ->add('rfc')
+            ->add('empresa')
             ->add('mes')
-            ->add('año')
+            ->add('anio')
         ;
     }
     
