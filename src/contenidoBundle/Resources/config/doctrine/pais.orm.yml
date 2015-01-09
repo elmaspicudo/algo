@@ -1,0 +1,14 @@
+contenidoBundle\Entity\pais:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        descripcion:
+            type: string
+            length: '40'
+    lifecycleCallbacks: {  }

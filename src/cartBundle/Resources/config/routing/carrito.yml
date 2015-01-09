@@ -1,0 +1,35 @@
+carrito:
+    path:     /
+    defaults: { _controller: "cartBundle:carrito:index" }
+carrito_checkaut:
+    path:     /{id}/check
+    defaults: { _controller: "cartBundle:carrito:checkAut" }
+carrito_adduser:
+    path:     /{id}/adduser
+    defaults: { _controller: "cartBundle:carrito:adduser" }
+carrito_show:
+    path:     /{id}/show
+    defaults: { _controller: "cartBundle:carrito:show" }
+
+carrito_new:
+    path:     /new
+    defaults: { _controller: "cartBundle:carrito:new" }
+
+carrito_create:
+    path:     /create
+    defaults: { _controller: "cartBundle:carrito:create" }
+    requirements: { _method: post }
+
+carrito_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "cartBundle:carrito:edit" }
+
+carrito_update:
+    path:     /{id}/update
+    defaults: { _controller: "cartBundle:carrito:update" }
+    requirements: { _method: post|put }
+
+carrito_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "cartBundle:carrito:delete" }
+    requirements: { _method: post|delete }

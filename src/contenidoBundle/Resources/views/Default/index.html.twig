@@ -1,0 +1,28 @@
+{% extends '::base_pagina.html.twig' %}
+{%block productos%}
+    <!-- Productos section start -->
+        <div id="price" class="section secondary-section">
+            <div class="container">
+                <div class="title">
+                    <h1>Productos</h1>
+                    <p>Estos son nuestros productos que puedes adquirir.</p>
+                </div>
+                <div class="price-table row-fluid">
+                {% for entity in entities %}
+                    <div class="span4 price-column">
+                        <h3>{{ entity.nombre }}</h3>
+                        {{ entity.contenido | raw }}
+                        <a href="{{ path('item_create', { 'producto_id': entity.id }) }}" class="button button-ps">Comprar</a>
+                        <a href="#" class="button button-ps">Ver mas</a>
+                    </div>  
+                {% endfor %}                 
+                </div>
+                <div class="centered">
+                    <p class="price-text">We Offer Custom Plans. Contact Us For More Info.</p>
+                    <a href="#contact" class="button">Contact Us</a>
+                </div>
+            </div>
+        </div>
+        <!-- Productos section end -->
+   
+{% endblock %}

@@ -1,0 +1,7 @@
+contenido_misproductos:
+    resource: "@contenidoBundle/Resources/config/routing/misproductos.yml"
+    prefix:   /misproductos
+
+contenido_homepage:
+    path:     /
+    defaults: { _controller: contenidoBundle:Default:index }
