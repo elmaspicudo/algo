@@ -22,11 +22,13 @@ class archivosController extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
-
+        $entity = new archivos();
+        $form   = $this->createCreateForm($entity);
         $entities = $em->getRepository('facturacionBundle:archivos')->findAll();
 
         return $this->render('facturacionBundle:archivos:index.html.twig', array(
             'entities' => $entities,
+            'formulario' => $form->createView(),
         ));
     }
     /**
