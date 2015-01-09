@@ -37,7 +37,7 @@ class cuentas
     /**
      * @var string
      */
-    private $año;
+    private $anio;
     protected $cuenta;
    
     /**
@@ -143,26 +143,26 @@ class cuentas
     }
 
     /**
-     * Set año
+     * Set anio
      *
-     * @param string $año
+     * @param string $anio
      * @return cuentas
      */
-    public function setAño($año)
+    public function setAnio($anio)
     {
-        $this->año = $año;
+        $this->anio = $anio;
 
         return $this;
     }
 
     /**
-     * Get año
+     * Get anio
      *
      * @return string 
      */
-    public function getAño()
+    public function getAnio()
     {
-        return $this->año;
+        return $this->anio;
     }
     /**
      * Set cuenta

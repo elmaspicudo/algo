@@ -19,7 +19,7 @@ contabilidadBundle\Entity\balanzas:
         mes:
             type: string
             length: '15'
-        año:
+        anio:
             type: string
             length: '4'
     lifecycleCallbacks: {  }

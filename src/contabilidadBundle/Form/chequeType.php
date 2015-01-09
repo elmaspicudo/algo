@@ -22,6 +22,7 @@ class chequeType extends AbstractType
             ->add('monto')
             ->add('beneficiario')
             ->add('rfc')
+            ->add('transaccion')
         ;
     }
     

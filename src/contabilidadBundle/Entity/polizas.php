@@ -32,7 +32,7 @@ class polizas
     /**
      * @var integer
      */
-    private $año;
+    private $anio;
     protected $poliza;
 
     /**
@@ -115,26 +115,26 @@ class polizas
     }
 
     /**
-     * Set año
+     * Set anio
      *
-     * @param integer $año
+     * @param integer $anio
      * @return polizas
      */
-    public function setAño($año)
+    public function setAnio($anio)
     {
-        $this->año = $año;
+        $this->anio = $anio;
 
         return $this;
     }
 
     /**
-     * Get año
+     * Get anio
      *
      * @return integer 
      */
-    public function getAño()
+    public function getAnio()
     {
-        return $this->año;
+        return $this->anio;
     }
     /**
      * Set poliza

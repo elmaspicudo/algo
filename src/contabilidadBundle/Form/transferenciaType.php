@@ -23,6 +23,7 @@ class transferenciaType extends AbstractType
             ->add('beneficiario')
             ->add('fecha')
             ->add('rfc')
+            ->add('transaccion')
         ;
     }
     

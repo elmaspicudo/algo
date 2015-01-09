@@ -1,15 +1,51 @@
-{% extends '::base.html.twig' %}
-
-{% block body -%}
-    <h1>comprobantes creation</h1>
-
-    {{ form(form) }}
-
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('comprobantes') }}">
-            Back to the list
-        </a>
-    </li>
-</ul>
-{% endblock %}
+{{ form_start(form) }}
+  	<div class="control-group">
+        {{ form_label(form.uuId) }}
+      	<div class="controls">
+      		   {{ form_widget(form.uuId) }}
+      	</div>
+      	<div class="controls-errors">
+	    	  {{ form_errors(form.uuId) }}
+	    </div>
+	</div>
+	<div class="row-fluid">
+		<div class="span3">
+			<div class="control-group">
+		        {{ form_label(form.monto) }}
+		      	<div class="controls">
+		      		   {{ form_widget(form.monto) }}
+		      	</div>
+		      	<div class="controls-errors">
+			    	  {{ form_errors(form.monto) }}
+			    </div>
+			</div>
+		</div>
+		<div class="span3">
+			<div class="control-group">
+		        {{ form_label(form.rfc) }}
+		      	<div class="controls">
+		      		   {{ form_widget(form.rfc) }}
+		      	</div>
+		      	<div class="controls-errors">
+			    	  {{ form_errors(form.rfc) }}
+			    </div>
+			</div>
+		</div>
+		
+		<div class="span3">
+			<div class="control-group">
+		        {{ form_label(form.transaccion) }}
+		      	<div class="controls">
+		      		   {{ form_widget(form.transaccion) }}
+		      	</div>
+		      	<div class="controls-errors">
+			    	  {{ form_errors(form.transaccion) }}
+			    </div>
+			</div>
+		</div>
+		
+</div>
+<div class="form-actions">
+	<button type="submit" class="btn btn-primary">Guardar cambios</button>
+</div>     
+{{ form_end(form) }}

@@ -1,15 +1,71 @@
-{% extends '::base.html.twig' %}
-
-{% block body -%}
-    <h1>transaccion creation</h1>
-
-    {{ form(form) }}
-
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('transaccion') }}">
-            Back to the list
-        </a>
-    </li>
-</ul>
-{% endblock %}
+{{ form_start(form) }}
+  	<div class="control-group">
+        {{ form_label(form.numCuenta) }}
+      	<div class="controls">
+      		   {{ form_widget(form.numCuenta) }}
+      	</div>
+      	<div class="controls-errors">
+	    	  {{ form_errors(form.numCuenta) }}
+	    </div>
+	</div>
+	<div class="row-fluid">
+		<div class="span3">
+			<div class="control-group">
+		        {{ form_label(form.concepto) }}
+		      	<div class="controls">
+		      		   {{ form_widget(form.concepto) }}
+		      	</div>
+		      	<div class="controls-errors">
+			    	  {{ form_errors(form.concepto) }}
+			    </div>
+			</div>
+		</div>
+		<div class="span3">
+			<div class="control-group">
+		        {{ form_label(form.debe) }}
+		      	<div class="controls">
+		      		   {{ form_widget(form.debe) }}
+		      	</div>
+		      	<div class="controls-errors">
+			    	  {{ form_errors(form.debe) }}
+			    </div>
+			</div>
+		</div>
+		<div class="span3">
+			<div class="control-group">
+		        {{ form_label(form.haber) }}
+		      	<div class="controls">
+		      		   {{ form_widget(form.haber) }}
+		      	</div>
+		      	<div class="controls-errors">
+			    	  {{ form_errors(form.haber) }}
+			    </div>
+			</div>
+		</div>
+		<div class="span3">
+			<div class="control-group">
+		        {{ form_label(form.moneda) }}
+		      	<div class="controls">
+		      		   {{ form_widget(form.moneda) }}
+		      	</div>
+		      	<div class="controls-errors">
+			    	  {{ form_errors(form.moneda) }}
+			    </div>
+			</div>
+		</div>
+		<div class="span3">
+			<div class="control-group">
+		        {{ form_label(form.tipoDeCambio) }}
+		      	<div class="controls">
+		      		   {{ form_widget(form.tipoDeCambio) }}
+		      	</div>
+		      	<div class="controls-errors">
+			    	  {{ form_errors(form.tipoDeCambio) }}
+			    </div>
+			</div>
+		</div>
+</div>
+<div class="form-actions">
+	<button type="submit" class="btn btn-primary">Guardar cambios</button>
+</div>     
+{{ form_end(form) }}

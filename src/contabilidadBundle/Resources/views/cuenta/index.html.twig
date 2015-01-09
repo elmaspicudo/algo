@@ -1,57 +1,87 @@
-{% extends '::base.html.twig' %}
+ {% extends '::base.html.twig' %}
+ {% block formulario %}
+ <div class="row-fluid">
+    <div class="box span12">
+        <div class="box-header" data-original-title="">
+            <h2><i class="halflings-icon edit"></i><span class="break"></span>Crear cuenta</h2>
+            <div class="box-icon">
+                <a href="" class="btn-setting"><i class="halflings-icon wrench"></i></a>
+                <a href="" class="btn-minimize"><i class="halflings-icon chevron-up"></i></a>
+                
+            </div>
+        </div>
 
-{% block body -%}
-    <h1>cuenta list</h1>
+        <div class="box-content">
+          
+                {% include "contabilidadBundle:cuenta:new.html.twig" with {
+                                            "form": formulario,
+                                        } %}
+              
+        </div>
+    </div>
+</div>
+{% endblock %}                    
+{% block grid %}
+<div class="row-fluid">
+    <div class="box span12">
+        <div class="box-header" data-original-title="">
+            <h2><i class="halflings-icon user"></i><span class="break"></span>cliente</h2>
+            <div class="box-icon">
+                <a href="#" class="btn-setting"><i class="halflings-icon wrench"></i></a>
+                <a href="#" class="btn-minimize"><i class="halflings-icon chevron-up"></i></a>
+                
+            </div>
+        </div>
+        <div class="box-content">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Numerodecuenta</th>
+                        <th>Descripcion</th>
+                        <th>Nivel</th>
+                        <th>Naturaleza</th>
+                        <th>Grupo</th>
+                        <th>Padre</th>
+                        <th>Sat</th>
+                        <th>Funcion</th>
+                        <th>Mayor</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for entity in entities %}
+                    <tr>
+                        <td><a href="{{ path('cuenta_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                        <td>{{ entity.numeroDeCuenta }}</td>
+                        <td>{{ entity.descripcion }}</td>
+                        <td>{{ entity.nivel }}</td>
+                        <td>{{ entity.naturaleza }}</td>
+                        <td>{{ entity.grupo }}</td>
+                        <td>{{ entity.padre }}</td>
+                        <td>{{ entity.sat }}</td>
+                        <td>{{ entity.funcion }}</td>
+                        <td>{{ entity.mayor }}</td>
+                        <td>
+                        <ul>
+                            <li>
+                                <a href="{{ path('cuenta_show', { 'id': entity.id }) }}">show</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('cuenta_edit', { 'id': entity.id }) }}">edit</a>
+                            </li>
+                        </ul>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
 
-    <table class="records_list">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Numerodecuenta</th>
-                <th>Descripcion</th>
-                <th>Nivel</th>
-                <th>Naturaleza</th>
-                <th>Grupo</th>
-                <th>Padre</th>
-                <th>Sat</th>
-                <th>Funcion</th>
-                <th>Mayor</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for entity in entities %}
-            <tr>
-                <td><a href="{{ path('cuenta_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
-                <td>{{ entity.numeroDeCuenta }}</td>
-                <td>{{ entity.descripcion }}</td>
-                <td>{{ entity.nivel }}</td>
-                <td>{{ entity.naturaleza }}</td>
-                <td>{{ entity.grupo }}</td>
-                <td>{{ entity.padre }}</td>
-                <td>{{ entity.sat }}</td>
-                <td>{{ entity.funcion }}</td>
-                <td>{{ entity.mayor }}</td>
-                <td>
                 <ul>
-                    <li>
-                        <a href="{{ path('cuenta_show', { 'id': entity.id }) }}">show</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('cuenta_edit', { 'id': entity.id }) }}">edit</a>
-                    </li>
-                </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-        <ul>
-        <li>
-            <a href="{{ path('cuenta_new') }}">
-                Create a new entry
-            </a>
-        </li>
-    </ul>
-    {% endblock %}
+                <li>
+                    <a href="{{ path('cuenta_new') }}">
+                        Create a new entry
+                    </a>
+                </li>
+            </ul>
+            {% endblock %}

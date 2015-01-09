@@ -17,8 +17,9 @@ contabilidadBundle\Entity\polizas:
         mes:
             type: string
             length: '10'
-        año:
-            type: integer
+        anio:
+            type: string
+            length: '10'
     manyToOne:
         poliza:
           targetEntity: contabilidadBundle\Entity\poliza

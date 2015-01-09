@@ -1,15 +1,107 @@
-{% extends '::base.html.twig' %}
+{{ form_start(form) }}
+  	<div class="control-group">
+        {{ form_label(form.numeroDeCuenta) }}
+      	<div class="controls">
+      		   {{ form_widget(form.numeroDeCuenta) }}
+      	</div>
+      	<div class="controls-errors">
+	    	  {{ form_errors(form.numeroDeCuenta) }}
+	    </div>
+	</div>
+	<div class="row-fluid">
+		<div class="span3">
+			<div class="control-group">
+		        {{ form_label(form.descripcion) }}
+		      	<div class="controls">
+		      		   {{ form_widget(form.descripcion) }}
+		      	</div>
+		      	<div class="controls-errors">
+			    	  {{ form_errors(form.descripcion) }}
+			    </div>
+			</div>
+		</div>
+		<div class="span3">
+			<div class="control-group">
+		        {{ form_label(form.nivel) }}
+		      	<div class="controls">
+		      		   {{ form_widget(form.nivel) }}
+		      	</div>
+		      	<div class="controls-errors">
+			    	  {{ form_errors(form.nivel) }}
+			    </div>
+			</div>
+		</div>
+		<div class="span3">
+			<div class="control-group">
+		        {{ form_label(form.naturaleza) }}
+		      	<div class="controls">
+		      		   {{ form_widget(form.naturaleza) }}
+		      	</div>
+		      	<div class="controls-errors">
+			    	  {{ form_errors(form.naturaleza) }}
+			    </div>
+			</div>
+		</div>
+		<div class="span3">
+			<div class="control-group">
+		        {{ form_label(form.grupo) }}
+		      	<div class="controls">
+		      		   {{ form_widget(form.grupo) }}
+		      	</div>
+		      	<div class="controls-errors">
+			    	  {{ form_errors(form.grupo) }}
+			    </div>
+			</div>
+		</div>
+		
+		<div class="span3">
+			<div class="control-group">
+		        {{ form_label(form.padre) }}
+		      	<div class="controls">
+		      		   {{ form_widget(form.padre) }}
+		      	</div>
+		      	<div class="controls-errors">
+			    	  {{ form_errors(form.padre) }}
+			    </div>
+			</div>
+		</div>
+		<div class="span3">
+			<div class="control-group">
+		        {{ form_label(form.sat) }}
+		      	<div class="controls">
+		      		   {{ form_widget(form.sat) }}
+		      	</div>
+		      	<div class="controls-errors">
+			    	  {{ form_errors(form.sat) }}
+			    </div>
+			</div>
+		</div>
+		<div class="span3">
+			<div class="control-group">
+		        {{ form_label(form.funcion) }}
+		      	<div class="controls">
+		      		   {{ form_widget(form.funcion) }}
+		      	</div>
+		      	<div class="controls-errors">
+			    	  {{ form_errors(form.funcion) }}
+			    </div>
+			</div>
+		</div>
+		<div class="span3">
+			<div class="control-group">
+		        {{ form_label(form.mayor) }}
+		      	<div class="controls">
+		      		   {{ form_widget(form.mayor) }}
+		      	</div>
+		      	<div class="controls-errors">
+			    	  {{ form_errors(form.mayor) }}
+			    </div>
+			</div>
+		</div>
+		
+</div>
+<div class="form-actions">
+	<button type="submit" class="btn btn-primary">Guardar cambios</button>
+</div>     
+{{ form_end(form) }}
 
-{% block body -%}
-    <h1>cuenta creation</h1>
-
-    {{ form(form) }}
-
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('cuenta') }}">
-            Back to the list
-        </a>
-    </li>
-</ul>
-{% endblock %}

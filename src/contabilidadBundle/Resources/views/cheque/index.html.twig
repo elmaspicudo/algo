@@ -1,53 +1,87 @@
 {% extends '::base.html.twig' %}
+ {% block formulario %}
+<div class="row-fluid">
+    <div class="box span12">
+        <div class="box-header" data-original-title="">
+            <h2><i class="halflings-icon edit"></i><span class="break"></span>Crear cheque</h2>
+            <div class="box-icon">
+                <a href="" class="btn-setting"><i class="halflings-icon wrench"></i></a>
+                <a href="" class="btn-minimize"><i class="halflings-icon chevron-up"></i></a>
+                
+            </div>
+        </div>
 
-{% block body -%}
-    <h1>cheque list</h1>
+        <div class="box-content">
+          
+                {% include "contabilidadBundle:cheque:new.html.twig" with {
+                                            "form": formulario,
+                                        } %}
+              
+        </div>
+    </div>
+</div>
+{% endblock %}                    
+{% block grid %}
+<div class="row-fluid">
+    <div class="box span12">
+        <div class="box-header" data-original-title="">
+            <h2><i class="halflings-icon user"></i><span class="break"></span>cheque</h2>
+            <div class="box-icon">
+                <a href="#" class="btn-setting"><i class="halflings-icon wrench"></i></a>
+                <a href="#" class="btn-minimize"><i class="halflings-icon chevron-up"></i></a>
+                <a href="#" class="btn-close"><i class="halflings-icon remove"></i></a>
+            </div>
+        </div>
+        <div class="box-content">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Num</th>
+                        <th>Banco</th>
+                        <th>Cuentaorigen</th>
+                        <th>Fecha</th>
+                        <th>Monto</th>
+                        <th>Beneficiario</th>
+                        <th>Rfc</th>
+                        <th>transaccion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for entity in entities %}
+                    <tr>
+                        <td><a href="{{ path('cheque_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                        <td>{{ entity.num }}</td>
+                        <td>{{ entity.banco }}</td>
+                        <td>{{ entity.cuentaOrigen }}</td>
+                        <td>{% if entity.fecha %}{{ entity.fecha|date('Y-m-d H:i:s') }}{% endif %}</td>
+                        <td>{{ entity.monto }}</td>
+                        <td>{{ entity.beneficiario }}</td>
+                        <td>{{ entity.rfc }}</td>
+                        <td>{{ entity.transaccion }}</td>
+                        <td>
+                        <ul>
+                            <li>
+                                <a href="{{ path('cheque_show', { 'id': entity.id }) }}">show</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('cheque_edit', { 'id': entity.id }) }}">edit</a>
+                            </li>
+                        </ul>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
 
-    <table class="records_list">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Num</th>
-                <th>Banco</th>
-                <th>Cuentaorigen</th>
-                <th>Fecha</th>
-                <th>Monto</th>
-                <th>Beneficiario</th>
-                <th>Rfc</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for entity in entities %}
-            <tr>
-                <td><a href="{{ path('cheque_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
-                <td>{{ entity.num }}</td>
-                <td>{{ entity.banco }}</td>
-                <td>{{ entity.cuentaOrigen }}</td>
-                <td>{% if entity.fecha %}{{ entity.fecha|date('Y-m-d H:i:s') }}{% endif %}</td>
-                <td>{{ entity.monto }}</td>
-                <td>{{ entity.beneficiario }}</td>
-                <td>{{ entity.rfc }}</td>
-                <td>
                 <ul>
-                    <li>
-                        <a href="{{ path('cheque_show', { 'id': entity.id }) }}">show</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('cheque_edit', { 'id': entity.id }) }}">edit</a>
-                    </li>
-                </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-        <ul>
-        <li>
-            <a href="{{ path('cheque_new') }}">
-                Create a new entry
-            </a>
-        </li>
-    </ul>
+                <li>
+                    <a href="{{ path('cheque_new') }}">
+                        Create a new entry
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>            
     {% endblock %}

@@ -14,7 +14,7 @@ contabilidadBundle\Entity\poliza:
             type: string
             length: '50'
         fecha:
-            type: datetime
+            type: date
         concepto:
             type: string
             length: '300'

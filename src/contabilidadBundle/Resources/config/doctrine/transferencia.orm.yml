@@ -26,7 +26,7 @@ contabilidadBundle\Entity\transferencia:
             type: string
             length: '300'
         fecha:
-            type: datetime
+            type: date
         rfc:
             type: string
             length: '14'
