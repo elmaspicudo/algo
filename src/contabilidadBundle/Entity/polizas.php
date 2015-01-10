@@ -33,7 +33,10 @@ class polizas
      * @var integer
      */
     private $anio;
+    
     protected $poliza;
+    
+    protected $empresa;
 
     /**
      * Get id
@@ -136,31 +139,27 @@ class polizas
     {
         return $this->anio;
     }
+
     /**
-     * Set poliza
+     * Set empresa
      *
-     * @param \contabilidadBundle\Entity\poliza $poliza
+     * @param \contabilidadBundle\Entity\empresa $empresa
      * @return polizas
      */
-    public function setPoliza(\contabilidaBundle\Entity\poliza $poliza = null)
+    public function setEmpresa(\contabilidadBundle\Entity\empresa $empresa = null)
     {
-        $this->poliza = $poliza;
+        $this->empresa = $empresa;
 
         return $this;
     }
 
     /**
-     * Get poliza
+     * Get empresa
      *
-     * @return \contabilidadBundle\Entity\poliza 
+     * @return \contabilidadBundle\Entity\empresa 
      */
-    public function getPoliza()
+    public function getEmpresa()
     {
-        return $this->poliza;
-    }
-
-    public function __toString()
-    {
-        return $this->descripcion; 
+        return $this->empresa;
     }
 }

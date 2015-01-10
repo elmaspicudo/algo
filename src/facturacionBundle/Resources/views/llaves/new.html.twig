@@ -1,15 +1,16 @@
-{% extends '::base.html.twig' %}
-
-{% block body -%}
-    <h1>llaves creation</h1>
-
-    {{ form(form) }}
-
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('llaves') }}">
-            Back to the list
-        </a>
-    </li>
-</ul>
-{% endblock %}
+{{ form_start(form) }}
+  	<div class="control-group">
+        {{ form_label(form.contenido) }}
+      	<div class="controls">
+      		   {{ form_widget(form.contenido) }}
+      	</div>
+      	<div class="controls-errors">
+	    	  {{ form_errors(form.contenido) }}
+	    </div>
+	</div>
+	
+</div>
+<div class="form-actions">
+	<button type="submit" class="btn btn-primary">Guardar cambios</button>
+</div>     
+{{ form_end(form) }}

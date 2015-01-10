@@ -19,7 +19,7 @@ contabilidadBundle\Entity\poliza:
             type: string
             length: '300'
     manyToOne:
-        cliente:
-          targetEntity: contabilidadBundle\Entity\cliente
-          inversedBy: poliza        
+        polizas:
+            targetEntity: contabilidadBundle\Entity\polizas
+            inversedBy: poliza               
     lifecycleCallbacks: {  }

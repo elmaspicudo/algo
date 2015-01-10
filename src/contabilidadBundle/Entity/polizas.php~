@@ -32,8 +32,13 @@ class polizas
     /**
      * @var integer
      */
+<<<<<<< HEAD
     private $anio;
     protected $poliza;
+=======
+    private $anioo;
+    protected $empresa;
+>>>>>>> 88fb6856b79920fc033399404bb0817d6c375dbe
 
     /**
      * Get id
@@ -114,6 +119,7 @@ class polizas
         return $this->mes;
     }
 
+<<<<<<< HEAD
     /**
      * Set anio
      *
@@ -163,4 +169,7 @@ class polizas
     {
         return $this->descripcion; 
     }
+=======
+   
+>>>>>>> 88fb6856b79920fc033399404bb0817d6c375dbe
 }

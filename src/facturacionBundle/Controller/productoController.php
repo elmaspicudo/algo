@@ -22,11 +22,13 @@ class productoController extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
-
+        $entity = new producto();
+        $formulario   = $this->createCreateForm($entity);
         $entities = $em->getRepository('facturacionBundle:producto')->findAll();
 
         return $this->render('facturacionBundle:producto:index.html.twig', array(
             'entities' => $entities,
+            'formulario'   => $formulario->createView(),
         ));
     }
     /**

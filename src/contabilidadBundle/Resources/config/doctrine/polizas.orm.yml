@@ -10,10 +10,7 @@ contabilidadBundle\Entity\polizas:
     fields:
         version:
             type: string
-            length: '100'
-        rfc:
-            type: string
-            length: '14'
+            length: '100'        
         mes:
             type: string
             length: '10'
@@ -24,4 +21,9 @@ contabilidadBundle\Entity\polizas:
         poliza:
           targetEntity: contabilidadBundle\Entity\poliza
           inversedBy: polizas        
+          type: integer
+    manyToOne:          
+        empresa:
+          targetEntity: contabilidadBundle\Entity\empresa
+          inversedBy: polizas     
     lifecycleCallbacks: {  }
