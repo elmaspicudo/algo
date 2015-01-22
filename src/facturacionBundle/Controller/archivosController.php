@@ -23,12 +23,13 @@ class archivosController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $entity = new archivos();
-        $form   = $this->createCreateForm($entity);
+
+        $formulario   = $this->createCreateForm($entity);
         $entities = $em->getRepository('facturacionBundle:archivos')->findAll();
 
         return $this->render('facturacionBundle:archivos:index.html.twig', array(
             'entities' => $entities,
-            'formulario' => $form->createView(),
+            'formulario'   => $formulario->createView(),
         ));
     }
     /**

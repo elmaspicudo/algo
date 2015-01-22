@@ -23,12 +23,12 @@ class impuestosController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $entity = new impuestos();
-        $form   = $this->createCreateForm($entity);
+        $formulario   = $this->createCreateForm($entity);
         $entities = $em->getRepository('facturacionBundle:impuestos')->findAll();
 
         return $this->render('facturacionBundle:impuestos:index.html.twig', array(
             'entities' => $entities,
-            'formulario' => $form->createView(),
+            'formulario'   => $formulario->createView(),
         ));
     }
     /**

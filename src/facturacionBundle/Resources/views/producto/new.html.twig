@@ -11,6 +11,28 @@
 	<div class="row-fluid">
 		<div class="span3">
 			<div class="control-group">
+		        {{ form_label(form.descripcion) }}
+		      	<div class="controls">
+		      		   {{ form_widget(form.descripcion) }}
+		      	</div>
+		      	<div class="controls-errors">
+			    	  {{ form_errors(form.descripcion) }}
+			    </div>
+			</div>
+		</div>
+		<div class="span3">
+			<div class="control-group">
+		        {{ form_label(form.precio) }}
+		      	<div class="controls">
+		      		   {{ form_widget(form.precio) }}
+		      	</div>
+		      	<div class="controls-errors">
+			    	  {{ form_errors(form.precio) }}
+			    </div>
+			</div>
+		</div>
+		<div class="span3">
+			<div class="control-group">
 		        {{ form_label(form.nombreCorto) }}
 		      	<div class="controls">
 		      		   {{ form_widget(form.nombreCorto) }}
@@ -22,17 +44,19 @@
 		</div>
 		<div class="span3">
 			<div class="control-group">
-		        {{ form_label(form.porcentaje) }}
+		        {{ form_label(form.unidadDeMedida) }}
 		      	<div class="controls">
-		      		   {{ form_widget(form.porcentaje) }}
+		      		   {{ form_widget(form.unidadDeMedida) }}
 		      	</div>
 		      	<div class="controls-errors">
-			    	  {{ form_errors(form.porcentaje) }}
+			    	  {{ form_errors(form.unidadDeMedida) }}
 			    </div>
 			</div>
 		</div>
+		
 </div>
 <div class="form-actions">
 	<button type="submit" class="btn btn-primary">Guardar cambios</button>
 </div>     
 {{ form_end(form) }}
+

@@ -10,7 +10,7 @@ facturacionBundle\Entity\llaves:
     fields:
         contenido:
             type: string
-            length: 255
+            length: 255 
     manyToOne:
         archivos:
           targetEntity: facturacionBundle\Entity\archivos

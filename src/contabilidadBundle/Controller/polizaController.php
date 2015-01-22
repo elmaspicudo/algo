@@ -22,11 +22,14 @@ class polizaController extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
-
+        $entity = new poliza();
+        $formulario   = $this->createCreateForm($entity);
+        
         $entities = $em->getRepository('contabilidadBundle:poliza')->findAll();
 
         return $this->render('contabilidadBundle:poliza:index.html.twig', array(
             'entities' => $entities,
+            'formulario'   => $formulario->createView(),
         ));
     }
     /**

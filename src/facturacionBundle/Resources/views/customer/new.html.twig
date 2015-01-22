@@ -1,15 +1,50 @@
-{% extends '::base.html.twig' %}
-
-{% block body -%}
-    <h1>customer creation</h1>
-
-    {{ form(form) }}
-
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('customer') }}">
-            Back to the list
-        </a>
-    </li>
-</ul>
-{% endblock %}
+{{ form_start(form) }}
+  	<div class="control-group">
+        {{ form_label(form.empresa) }}
+      	<div class="controls">
+      		   {{ form_widget(form.empresa) }}
+      	</div>
+      	<div class="controls-errors">
+	    	  {{ form_errors(form.empresa) }}
+	    </div>
+	</div>
+	<div class="row-fluid">
+		<div class="span3">
+			<div class="control-group">
+		        {{ form_label(form.razonSocial) }}
+		      	<div class="controls">
+		      		   {{ form_widget(form.razonSocial) }}
+		      	</div>
+		      	<div class="controls-errors">
+			    	  {{ form_errors(form.razonSocial) }}
+			    </div>
+			</div>
+		</div>
+		<div class="span3">
+			<div class="control-group">
+		        {{ form_label(form.rfc) }}
+		      	<div class="controls">
+		      		   {{ form_widget(form.rfc) }}
+		      	</div>
+		      	<div class="controls-errors">
+			    	  {{ form_errors(form.rfc) }}
+			    </div>
+			</div>
+		</div>
+		<div class="span3">
+			<div class="control-group">
+		        {{ form_label(form.descripcion) }}
+		      	<div class="controls">
+		      		   {{ form_widget(form.descripcion) }}
+		      	</div>
+		      	<div class="controls-errors">
+			    	  {{ form_errors(form.descripcion) }}
+			    </div>
+			</div>
+		</div>
+		
+</div>
+<div class="form-actions">
+	<button type="submit" class="btn btn-primary">Guardar cambios</button>
+</div>     
+{{ form_end(form) }}

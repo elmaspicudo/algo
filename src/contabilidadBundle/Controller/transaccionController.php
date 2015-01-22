@@ -22,11 +22,14 @@ class transaccionController extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
-
+        $entity = new transaccion();
+        $formulario   = $this->createCreateForm($entity);
+        
         $entities = $em->getRepository('contabilidadBundle:transaccion')->findAll();
 
         return $this->render('contabilidadBundle:transaccion:index.html.twig', array(
             'entities' => $entities,
+            'formulario'   => $formulario->createView(),
         ));
     }
     /**

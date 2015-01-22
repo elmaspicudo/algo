@@ -22,11 +22,13 @@ class customerController extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
-
+        $entity = new customer();
+        $formulario   = $this->createCreateForm($entity);
         $entities = $em->getRepository('facturacionBundle:customer')->findAll();
 
         return $this->render('facturacionBundle:customer:index.html.twig', array(
             'entities' => $entities,
+            'formulario'   => $formulario->createView(),
         ));
     }
     /**

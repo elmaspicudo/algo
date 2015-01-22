@@ -19,7 +19,7 @@ class cuentasType extends AbstractType
             ->add('vercion')
             ->add('totalDeCuentas')
             ->add('mes')
-            ->add('año')
+            ->add('anio')
         ;
     }
     

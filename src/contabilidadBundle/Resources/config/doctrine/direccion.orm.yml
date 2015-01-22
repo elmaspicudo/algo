@@ -33,7 +33,9 @@ contabilidadBundle\Entity\direccion:
             type: string
             length: '30'
         estado:
-            type: integer
+            type: string
+            length: '30'
         pais:
-            type: integer
+            type: string
+            length: '30'
     lifecycleCallbacks: {  }

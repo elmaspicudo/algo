@@ -22,11 +22,13 @@ class cuentaController extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
-
+        $entity = new cuenta();
+        $formulario   = $this->createCreateForm($entity);
         $entities = $em->getRepository('contabilidadBundle:cuenta')->findAll();
 
         return $this->render('contabilidadBundle:cuenta:index.html.twig', array(
             'entities' => $entities,
+            'formulario'   => $formulario->createView(),
         ));
     }
     /**

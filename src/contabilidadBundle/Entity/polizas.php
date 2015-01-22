@@ -32,7 +32,10 @@ class polizas
     /**
      * @var integer
      */
-    private $anioo;
+    private $anio;
+    
+    protected $poliza;
+    
     protected $empresa;
 
     /**
@@ -113,13 +116,6 @@ class polizas
     {
         return $this->mes;
     }
-
-   
-    /**
-     * @var integer
-     */
-    private $anio;
-
 
     /**
      * Set anio

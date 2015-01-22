@@ -22,11 +22,14 @@ class facturaController extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
+        $entity = new factura();
+        $formulario   = $this->createCreateForm($entity);
 
         $entities = $em->getRepository('contabilidadBundle:factura')->findAll();
 
         return $this->render('contabilidadBundle:factura:index.html.twig', array(
             'entities' => $entities,
+            'formulario'   => $formulario->createView(),
         ));
     }
     /**

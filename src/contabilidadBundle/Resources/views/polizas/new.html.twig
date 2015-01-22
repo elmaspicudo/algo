@@ -1,15 +1,51 @@
-{% extends '::base.html.twig' %}
+{{ form_start(form) }}
+  	<div class="control-group">
+        {{ form_label(form.version) }}
+      	<div class="controls">
+      		   {{ form_widget(form.version) }}
+      	</div>
+      	<div class="controls-errors">
+	    	  {{ form_errors(form.version) }}
+	    </div>
+	</div>
+	<div class="row-fluid">
+		<div class="span3">
+			<div class="control-group">
+		        {{ form_label(form.rfc) }}
+		      	<div class="controls">
+		      		   {{ form_widget(form.rfc) }}
+		      	</div>
+		      	<div class="controls-errors">
+			    	  {{ form_errors(form.rfc) }}
+			    </div>
+			</div>
+		</div>
+		<div class="span3">
+			<div class="control-group">
+		        {{ form_label(form.mes) }}
+		      	<div class="controls">
+		      		   {{ form_widget(form.mes) }}
+		      	</div>
+		      	<div class="controls-errors">
+			    	  {{ form_errors(form.mes) }}
+			    </div>
+			</div>
+		</div>
+		<div class="span3">
+			<div class="control-group">
+		        {{ form_label(form.anio) }}
+		      	<div class="controls">
+		      		   {{ form_widget(form.anio) }}
+		      	</div>
+		      	<div class="controls-errors">
+			    	  {{ form_errors(form.anio) }}
+			    </div>
+			</div>
+		</div>
+		
+</div>
+<div class="form-actions">
+	<button type="submit" class="btn btn-primary">Guardar cambios</button>
+</div>     
+{{ form_end(form) }}
 
-{% block body -%}
-    <h1>polizas creation</h1>
-
-    {{ form(form) }}
-
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('polizas') }}">
-            Back to the list
-        </a>
-    </li>
-</ul>
-{% endblock %}

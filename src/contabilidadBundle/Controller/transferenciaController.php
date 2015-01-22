@@ -22,11 +22,13 @@ class transferenciaController extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
-
+        $entity = new transferencia();
+        $formulario   = $this->createCreateForm($entity);
         $entities = $em->getRepository('contabilidadBundle:transferencia')->findAll();
 
         return $this->render('contabilidadBundle:transferencia:index.html.twig', array(
             'entities' => $entities,
+            'formulario'   => $formulario->createView(),
         ));
     }
     /**

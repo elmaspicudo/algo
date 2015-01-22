@@ -139,4 +139,27 @@ class producto
     {
         return $this->unidadDeMedida;
     }
+
+    /**
+     * Set nombreCorto
+     *
+     * @param string $nombreCorto
+     * @return producto
+     */
+    public function setNombreCorto($nombreCorto)
+    {
+        $this->nombreCorto = $nombreCorto;
+
+        return $this;
+    }
+
+    /**
+     * Get nombreCorto
+     *
+     * @return string 
+     */
+    public function getNombreCorto()
+    {
+        return $this->nombreCorto;
+    }
 }

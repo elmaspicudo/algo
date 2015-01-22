@@ -22,11 +22,13 @@ class direccionController extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
-
+        $entity = new direccion();
+        $formulario   = $this->createCreateForm($entity);
         $entities = $em->getRepository('contabilidadBundle:direccion')->findAll();
 
         return $this->render('contabilidadBundle:direccion:index.html.twig', array(
             'entities' => $entities,
+            'formulario'   => $formulario->createView(),
         ));
     }
     /**

@@ -1,46 +1,78 @@
-{% extends '::base.html.twig' %}
+ {% extends '::base.html.twig' %}
+ {% block formulario %}
+ <div class="row-fluid">
+    <div class="box span12">
+        <div class="box-header" data-original-title="">
+            <h2><i class="halflings-icon edit"></i><span class="break"></span>Crear transferencia</h2>
+            <div class="box-icon">
+                <a href="" class="btn-setting"><i class="halflings-icon wrench"></i></a>
+                <a href="" class="btn-minimize"><i class="halflings-icon chevron-up"></i></a>
+                
+            </div>
+        </div>
 
-{% block body -%}
-    <h1>transferencia list</h1>
-
-    <table class="records_list">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Cuentaorigen</th>
-                <th>Bancoorigen</th>
-                <th>Monto</th>
-                <th>Cuentadestino</th>
-                <th>Bancodestino</th>
-                <th>Beneficiario</th>
-                <th>Fecha</th>
-                <th>Rfc</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for entity in entities %}
-            <tr>
-                <td><a href="{{ path('transferencia_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
-                <td>{{ entity.cuentaOrigen }}</td>
-                <td>{{ entity.bancoOrigen }}</td>
-                <td>{{ entity.monto }}</td>
-                <td>{{ entity.cuentaDestino }}</td>
-                <td>{{ entity.bancoDestino }}</td>
-                <td>{{ entity.beneficiario }}</td>
-                <td>{% if entity.fecha %}{{ entity.fecha|date('Y-m-d H:i:s') }}{% endif %}</td>
-                <td>{{ entity.rfc }}</td>
-                <td>
-                <ul>
-                    <li>
-                        <a href="{{ path('transferencia_show', { 'id': entity.id }) }}">show</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('transferencia_edit', { 'id': entity.id }) }}">edit</a>
-                    </li>
-                </ul>
-                </td>
-            </tr>
+        <div class="box-content">
+          
+                {% include "contabilidadBundle:transferencia:new.html.twig" with {
+                                            "form": formulario,
+                                        } %}
+              
+        </div>
+    </div>
+</div>
+{% endblock %}                    
+{% block grid %}
+<div class="row-fluid">
+    <div class="box span12">
+        <div class="box-header" data-original-title="">
+            <h2><i class="halflings-icon user"></i><span class="break"></span>cliente</h2>
+            <div class="box-icon">
+                <a href="#" class="btn-setting"><i class="halflings-icon wrench"></i></a>
+                <a href="#" class="btn-minimize"><i class="halflings-icon chevron-up"></i></a>
+                
+            </div>
+        </div>
+        <div class="box-content">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Cuentaorigen</th>
+                        <th>Bancoorigen</th>
+                        <th>Monto</th>
+                        <th>Cuentadestino</th>
+                        <th>Bancodestino</th>
+                        <th>Beneficiario</th>
+                        <th>Fecha</th>
+                        <th>Rfc</th>
+                        <th>transaccion</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                {% for entity in entities %}
+                    <tr>
+                        <td><a href="{{ path('transferencia_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                        <td>{{ entity.cuentaOrigen }}</td>
+                        <td>{{ entity.bancoOrigen }}</td>
+                        <td>{{ entity.monto }}</td>
+                        <td>{{ entity.cuentaDestino }}</td>
+                        <td>{{ entity.bancoDestino }}</td>
+                        <td>{{ entity.beneficiario }}</td>
+                        <td>{% if entity.fecha %}{{ entity.fecha|date('Y-m-d H:i:s') }}{% endif %}</td>
+                        <td>{{ entity.rfc }}</td>
+                        <td>{{ entity.transaccion }}</td>
+                    
+                        <ul>
+                            <li>
+                                <a href="{{ path('transferencia_show', { 'id': entity.id }) }}">show</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('transferencia_edit', { 'id': entity.id }) }}">edit</a>
+                            </li>
+                        </ul>
+                        </td>
+                    </tr>
         {% endfor %}
         </tbody>
     </table>

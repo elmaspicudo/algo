@@ -19,7 +19,7 @@ class balanzasType extends AbstractType
             ->add('rfc')
             ->add('totalCuentas')
             ->add('mes')
-            ->add('año')
+            ->add('anio')
         ;
     }
     

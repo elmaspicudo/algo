@@ -1,12 +1,12 @@
 <?php
 
-namespace contabilidadBundle\Form;
+namespace facturacionBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
-class transferenciaType extends AbstractType
+class productoType extends AbstractType
 {
     /**
      * @param FormBuilderInterface $builder
@@ -15,15 +15,11 @@ class transferenciaType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('cuentaOrigen')
-            ->add('bancoOrigen')
-            ->add('monto')
-            ->add('cuentaDestino')
-            ->add('bancoDestino')
-            ->add('beneficiario')
-            ->add('fecha')
-            ->add('rfc')
-            ->add('transaccion')
+            ->add('nombre')
+            ->add('descripcion')
+            ->add('precio')
+            ->add('nombreCorto')
+            ->add('unidadDeMedida')
         ;
     }
     
@@ -33,7 +29,7 @@ class transferenciaType extends AbstractType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'contabilidadBundle\Entity\transferencia'
+            'data_class' => 'facturacionBundle\Entity\producto'
         ));
     }
 
@@ -42,6 +38,6 @@ class transferenciaType extends AbstractType
      */
     public function getName()
     {
-        return 'contabilidadbundle_transferencia';
+        return 'facturacionbundle_producto';
     }
 }

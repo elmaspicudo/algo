@@ -18,6 +18,7 @@ class comprobantesType extends AbstractType
             ->add('uuId')
             ->add('monto')
             ->add('rfc')
+            ->add('transaccion')
         ;
     }
     

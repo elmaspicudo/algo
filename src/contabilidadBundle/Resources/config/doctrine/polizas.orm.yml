@@ -15,7 +15,13 @@ contabilidadBundle\Entity\polizas:
             type: string
             length: '10'
         anio:
-            type: integer
+            type: string
+            length: '10'
+    manyToOne:
+        poliza:
+          targetEntity: contabilidadBundle\Entity\poliza
+          inversedBy: polizas        
+          type: integer
     manyToOne:          
         empresa:
           targetEntity: contabilidadBundle\Entity\empresa

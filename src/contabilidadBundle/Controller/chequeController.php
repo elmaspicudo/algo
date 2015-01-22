@@ -22,11 +22,14 @@ class chequeController extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
-
+        $entity = new cheque();
+        $formulario   = $this->createCreateForm($entity);   
+            
         $entities = $em->getRepository('contabilidadBundle:cheque')->findAll();
 
         return $this->render('contabilidadBundle:cheque:index.html.twig', array(
             'entities' => $entities,
+            'formulario'   => $formulario->createView(),
         ));
     }
     /**

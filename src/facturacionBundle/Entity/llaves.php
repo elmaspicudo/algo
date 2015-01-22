@@ -75,36 +75,4 @@ class llaves
         return $this->archivos;
     }
 
-    public function __toString()
-    {
-        return $this->descripcion; 
-    }
-    /**
-     * @var \facturacionBundle\Entity\archivos
-     */
-    private $archivo;
-
-
-    /**
-     * Set archivo
-     *
-     * @param \facturacionBundle\Entity\archivo $archivo
-     * @return llaves
-     */
-    public function setArchivo(\facturacionBundle\Entity\archivo $archivo = null)
-    {
-        $this->archivo = $archivo;
-
-        return $this;
-    }
-
-    /**
-     * Get archivo
-     *
-     * @return \facturacionBundle\Entity\archivo 
-     */
-    public function getArchivo()
-    {
-        return $this->archivo;
-    }
 }
