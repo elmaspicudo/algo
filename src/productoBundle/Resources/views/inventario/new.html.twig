@@ -1,0 +1,39 @@
+{{ form_start(form) }}
+  	<div class="control-group">
+        {{ form_label(form.nombre) }}
+      	<div class="controls">
+      		   {{ form_widget(form.nombre) }}
+      	</div>
+      	<div class="controls-errors">
+	    	  {{ form_errors(form.nombre) }}
+	    </div>
+	</div>
+	<div class="row-fluid">
+		<div class="span3">
+			<div class="control-group">
+		        {{ form_label(form.unidadM) }}
+		      	<div class="controls">
+		      		   {{ form_widget(form.unidadM) }}
+		      	</div>
+		      	<div class="controls-errors">
+			    	  {{ form_errors(form.unidadM) }}
+			    </div>
+			</div>
+		</div>
+		<div class="span3">
+			<div class="control-group">
+		        {{ form_label(form.existencia) }}
+		      	<div class="controls">
+		      		   {{ form_widget(form.existencia) }}
+		      	</div>
+		      	<div class="controls-errors">
+			    	  {{ form_errors(form.existencia) }}
+			    </div>
+			</div>
+		</div>
+		
+</div>
+<div class="form-actions">
+	<button type="submit" class="btn btn-primary">Guardar cambios</button>
+</div>     
+{{ form_end(form) }}

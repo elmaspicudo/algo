@@ -33,5 +33,5 @@ contabilidadBundle\Entity\cuenta:
             length: '100'
         mayor:
             type: string
-            length: '100'
+            length: '100'     
     lifecycleCallbacks: {  }

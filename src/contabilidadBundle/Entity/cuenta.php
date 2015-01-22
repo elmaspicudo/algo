@@ -58,7 +58,7 @@ class cuenta
      * @var string
      */
     private $mayor;
-
+    
 
     /**
      * Get id

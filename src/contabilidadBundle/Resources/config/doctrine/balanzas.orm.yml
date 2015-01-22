@@ -22,4 +22,11 @@ contabilidadBundle\Entity\balanzas:
         anio:
             type: string
             length: '4'
+    manyToOne:          
+        empresa:
+          targetEntity: contabilidadBundle\Entity\empresa
+          inversedBy: balanzas
+        balanza:
+          targetEntity: contabilidadBundle\Entity\balanza
+          inversedBy: balanzas          
     lifecycleCallbacks: {  }

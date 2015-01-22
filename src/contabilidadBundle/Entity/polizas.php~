@@ -32,13 +32,11 @@ class polizas
     /**
      * @var integer
      */
-<<<<<<< HEAD
     private $anio;
-    protected $poliza;
-=======
-    private $anioo;
+    
+    
     protected $empresa;
->>>>>>> 88fb6856b79920fc033399404bb0817d6c375dbe
+    protected $poliza;
 
     /**
      * Get id
@@ -119,7 +117,6 @@ class polizas
         return $this->mes;
     }
 
-<<<<<<< HEAD
     /**
      * Set anio
      *
@@ -142,13 +139,36 @@ class polizas
     {
         return $this->anio;
     }
+
+    /**
+     * Set empresa
+     *
+     * @param \contabilidadBundle\Entity\empresa $empresa
+     * @return polizas
+     */
+    public function setEmpresa(\contabilidadBundle\Entity\empresa $empresa = null)
+    {
+        $this->empresa = $empresa;
+
+        return $this;
+    }
+
+    /**
+     * Get empresa
+     *
+     * @return \contabilidadBundle\Entity\empresa 
+     */
+    public function getEmpresa()
+    {
+        return $this->empresa;
+    }    
     /**
      * Set poliza
      *
      * @param \contabilidadBundle\Entity\poliza $poliza
      * @return polizas
      */
-    public function setPoliza(\contabilidaBundle\Entity\poliza $poliza = null)
+    public function setPoliza(\contabilidadBundle\Entity\poliza $poliza = null)
     {
         $this->poliza = $poliza;
 
@@ -163,13 +183,5 @@ class polizas
     public function getPoliza()
     {
         return $this->poliza;
-    }
-
-    public function __toString()
-    {
-        return $this->descripcion; 
-    }
-=======
-   
->>>>>>> 88fb6856b79920fc033399404bb0817d6c375dbe
+    }    
 }

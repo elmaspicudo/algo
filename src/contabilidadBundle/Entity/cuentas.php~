@@ -38,8 +38,9 @@ class cuentas
      * @var string
      */
     private $anio;
+    
+    protected $empresa;
     protected $cuenta;
-   
     /**
      * Get id
      *
@@ -165,9 +166,31 @@ class cuentas
         return $this->anio;
     }
     /**
+     * Set empresa
+     *
+     * @param \contabilidadBundle\Entity\empresa $empresa
+     * @return cuentas
+     */
+    public function setEmpresa(\contabilidadBundle\Entity\empresa $empresa = null)
+    {
+        $this->empresa = $empresa;
+
+        return $this;
+    }
+
+    /**
+     * Get empresa
+     *
+     * @return \contabilidadBundle\Entity\empresa 
+     */
+    public function getEmpresa()
+    {
+        return $this->empresa;
+    }
+    /**
      * Set cuenta
      *
-     * @param \contabilidadBBundle\Entity\cuenta $cuenta
+     * @param \contabilidadBundle\Entity\cuenta $cuenta
      * @return cuentas
      */
     public function setCuenta(\contabilidadBundle\Entity\cuenta $cuenta = null)
@@ -180,15 +203,10 @@ class cuentas
     /**
      * Get cuenta
      *
-     * @return \dscorpBundle\Entity\cuenta 
+     * @return \contabilidadBundle\Entity\cuenta 
      */
     public function getCuenta()
     {
         return $this->cuenta;
-    }
-
-    public function __toString()
-    {
-        return $this->descripcion; 
     }
 }

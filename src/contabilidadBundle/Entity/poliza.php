@@ -36,10 +36,6 @@ class poliza
 
  
     /**
-     * @var \contabilidadBundle\Entity\polizas
-     */
-    private $polizas;
-    /**
      * Get id
      *
      * @return integer 
@@ -145,30 +141,5 @@ class poliza
     public function __toString()
     {
         return $this->id; 
-    }
-    
-
-
-    /**
-     * Set polizas
-     *
-     * @param \contabilidadBundle\Entity\polizas $polizas
-     * @return poliza
-     */
-    public function setPolizas(\contabilidadBundle\Entity\polizas $polizas = null)
-    {
-        $this->polizas = $polizas;
-
-        return $this;
-    }
-
-    /**
-     * Get polizas
-     *
-     * @return \contabilidadBundle\Entity\polizas 
-     */
-    public function getPolizas()
-    {
-        return $this->polizas;
     }
 }

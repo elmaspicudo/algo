@@ -1,0 +1,30 @@
+precios:
+    path:     /
+    defaults: { _controller: "productoBundle:precios:index" }
+
+precios_show:
+    path:     /{id}/show
+    defaults: { _controller: "productoBundle:precios:show" }
+
+precios_new:
+    path:     /new
+    defaults: { _controller: "productoBundle:precios:new" }
+
+precios_create:
+    path:     /create
+    defaults: { _controller: "productoBundle:precios:create" }
+    requirements: { _method: post }
+
+precios_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "productoBundle:precios:edit" }
+
+precios_update:
+    path:     /{id}/update
+    defaults: { _controller: "productoBundle:precios:update" }
+    requirements: { _method: post|put }
+
+precios_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "productoBundle:precios:delete" }
+    requirements: { _method: post|delete }

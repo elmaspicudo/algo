@@ -17,9 +17,5 @@ contabilidadBundle\Entity\balanza:
         haber:
             type: binary
         saldoFinal:
-            type: binary
-    manyToOne:
-        balanzas:
-          targetEntity: contabilidadBundle\Entity\balanzas
-          inversedBy: balanza        
+            type: binary        
     lifecycleCallbacks: {  }

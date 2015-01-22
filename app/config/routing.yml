@@ -8,6 +8,9 @@ admin:
 
 user:
     resource: "@userBundle/Resources/config/routing.yml"
+
+producto:
+    resource: "@productoBundle/Resources/config/routing.yml"
     prefix:   /
 
 facturacion:

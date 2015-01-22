@@ -23,6 +23,8 @@ class AppKernel extends Kernel
             new adminBundle\adminBundle(),
             new contenidoBundle\contenidoBundle(),
             new cartBundle\cartBundle(),
+            new productoBundle\productoBundle(),
+
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

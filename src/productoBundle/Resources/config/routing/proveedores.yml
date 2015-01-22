@@ -1,0 +1,30 @@
+proveedores:
+    path:     /
+    defaults: { _controller: "productoBundle:proveedores:index" }
+
+proveedores_show:
+    path:     /{id}/show
+    defaults: { _controller: "productoBundle:proveedores:show" }
+
+proveedores_new:
+    path:     /new
+    defaults: { _controller: "productoBundle:proveedores:new" }
+
+proveedores_create:
+    path:     /create
+    defaults: { _controller: "productoBundle:proveedores:create" }
+    requirements: { _method: post }
+
+proveedores_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "productoBundle:proveedores:edit" }
+
+proveedores_update:
+    path:     /{id}/update
+    defaults: { _controller: "productoBundle:proveedores:update" }
+    requirements: { _method: post|put }
+
+proveedores_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "productoBundle:proveedores:delete" }
+    requirements: { _method: post|delete }

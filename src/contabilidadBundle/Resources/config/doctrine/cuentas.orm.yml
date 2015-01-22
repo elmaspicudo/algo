@@ -22,8 +22,11 @@ contabilidadBundle\Entity\cuentas:
         anio:
             type: string
             length: '4'
-    manyToOne:
+    manyToOne:          
+        empresa:
+          targetEntity: contabilidadBundle\Entity\empresa
+          inversedBy: cuentas  
         cuenta:
           targetEntity: contabilidadBundle\Entity\cuenta
-          inversedBy: cuentas        
+          inversedBy: cuentas              
     lifecycleCallbacks: {  }
