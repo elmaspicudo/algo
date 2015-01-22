@@ -20,6 +20,7 @@ class AppKernel extends Kernel
             new contaBundle\contaBundle(),
             new contabilidadBundle\contabilidadBundle(),
             new facturacionBundle\facturacionBundle(),
+            new productoBundle\productoBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

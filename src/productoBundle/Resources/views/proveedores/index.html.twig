@@ -1,0 +1,61 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>proveedores list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Razonsocial</th>
+                <th>Nombrecomercial</th>
+                <th>Rfc</th>
+                <th>Calle</th>
+                <th>Numeroexterior</th>
+                <th>Estado</th>
+                <th>Codigopostal</th>
+                <th>Clave</th>
+                <th>Colonia</th>
+                <th>Numerointerior</th>
+                <th>Municipio</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('proveedores_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.razonSocial }}</td>
+                <td>{{ entity.nombreComercial }}</td>
+                <td>{{ entity.rfc }}</td>
+                <td>{{ entity.calle }}</td>
+                <td>{{ entity.numeroExterior }}</td>
+                <td>{{ entity.estado }}</td>
+                <td>{{ entity.codigoPostal }}</td>
+                <td>{{ entity.clave }}</td>
+                <td>{{ entity.colonia }}</td>
+                <td>{{ entity.numeroInterior }}</td>
+                <td>{{ entity.municipio }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('proveedores_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('proveedores_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('proveedores_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

@@ -1,0 +1,27 @@
+producto_precioproducto:
+    resource: "@productoBundle/Resources/config/routing/precioproducto.yml"
+    prefix:   /precioproducto
+
+producto_precios:
+    resource: "@productoBundle/Resources/config/routing/precios.yml"
+    prefix:   /precios
+
+producto_recepciondemercancia:
+    resource: "@productoBundle/Resources/config/routing/recepciondemercancia.yml"
+    prefix:   /recepciondemercancia
+
+producto_inventario:
+    resource: "@productoBundle/Resources/config/routing/inventario.yml"
+    prefix:   /inventario
+
+producto_lineas:
+    resource: "@productoBundle/Resources/config/routing/lineas.yml"
+    prefix:   /lineas
+
+producto_proveedores:
+    resource: "@productoBundle/Resources/config/routing/proveedores.yml"
+    prefix:   /proveedores
+
+producto_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: productoBundle:Default:index }

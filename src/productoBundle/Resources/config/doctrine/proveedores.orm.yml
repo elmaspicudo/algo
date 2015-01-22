@@ -1,0 +1,44 @@
+productoBundle\Entity\proveedores:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        razonSocial:
+            type: string
+            length: 255
+        nombreComercial:
+            type: string
+            length: 255
+        rfc:
+            type: string
+            length: '14'
+        calle:
+            type: string
+            length: '40'
+        numeroExterior:
+            type: string
+            length: '5'
+        estado:
+            type: string
+            length: '50'
+        codigoPostal:
+            type: string
+            length: '10'
+        clave:
+            type: string
+            length: '50'
+        colonia:
+            type: string
+            length: '50'
+        numeroInterior:
+            type: string
+            length: '5'
+        municipio:
+            type: string
+            length: '40'
+    lifecycleCallbacks: {  }

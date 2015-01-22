@@ -1,0 +1,21 @@
+productoBundle\Entity\precioProducto:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        precio:
+            type: string
+            length: 255
+    manyToOne:          
+        producto:
+          targetEntity: facturacionBundle\Entity\producto
+          inversedBy: precioProducto           
+        precios:
+          targetEntity: productoBundle\Entity\precios
+          inversedBy: precioProducto                    
+    lifecycleCallbacks: {  }

@@ -1,0 +1,23 @@
+productoBundle\Entity\recepcionDeMercancia:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        producto:
+            type: string
+            length: 255
+        precioUnitario:
+            type: string
+            length: 255
+        noDeProductos:
+            type: string
+            length: '10'
+        precioTotal:
+            type: string
+            length: '20'
+    lifecycleCallbacks: {  }

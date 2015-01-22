@@ -38,8 +38,7 @@ class balanza
      * @var binary
      */
     private $saldoFinal;
-    protected $balanzas;
-
+    
     /**
      * Get id
      *
@@ -164,31 +163,5 @@ class balanza
     {
         return $this->saldoFinal;
     }
-    /**
-     * Set balanzas
-     *
-     * @param \contabilidadBundle\Entity\balanzas $balanzas
-     * @return balanza
-     */
-    public function setBalanzas(\contabilidadBundle\Entity\balanzas $balanzas = null)
-    {
-        $this->balanzas = $balanzas;
-
-        return $this;
-    }
-
-    /**
-     * Get balanzas
-     *
-     * @return \contabilidadBundle\Entity\balanzas 
-     */
-    public function getBalanzas()
-    {
-        return $this->balanzas;
-    }
-
-    public function __toString()
-    {
-        return $this->descripcion; 
-    }
+    
 }

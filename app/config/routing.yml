@@ -1,3 +1,7 @@
+producto:
+    resource: "@productoBundle/Resources/config/routing.yml"
+    prefix:   /
+
 facturacion:
     resource: "@facturacionBundle/Resources/config/routing.yml"
     prefix:   /

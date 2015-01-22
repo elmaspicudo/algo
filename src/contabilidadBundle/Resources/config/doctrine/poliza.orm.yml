@@ -17,9 +17,5 @@ contabilidadBundle\Entity\poliza:
             type: date
         concepto:
             type: string
-            length: '300'
-    manyToOne:
-        polizas:
-            targetEntity: contabilidadBundle\Entity\polizas
-            inversedBy: poliza               
+            length: '300'             
     lifecycleCallbacks: {  }

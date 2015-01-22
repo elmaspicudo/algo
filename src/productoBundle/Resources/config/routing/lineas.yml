@@ -1,0 +1,30 @@
+lineas:
+    path:     /
+    defaults: { _controller: "productoBundle:lineas:index" }
+
+lineas_show:
+    path:     /{id}/show
+    defaults: { _controller: "productoBundle:lineas:show" }
+
+lineas_new:
+    path:     /new
+    defaults: { _controller: "productoBundle:lineas:new" }
+
+lineas_create:
+    path:     /create
+    defaults: { _controller: "productoBundle:lineas:create" }
+    requirements: { _method: post }
+
+lineas_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "productoBundle:lineas:edit" }
+
+lineas_update:
+    path:     /{id}/update
+    defaults: { _controller: "productoBundle:lineas:update" }
+    requirements: { _method: post|put }
+
+lineas_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "productoBundle:lineas:delete" }
+    requirements: { _method: post|delete }

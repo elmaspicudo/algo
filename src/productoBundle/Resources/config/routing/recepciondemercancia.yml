@@ -1,0 +1,30 @@
+recepciondemercancia:
+    path:     /
+    defaults: { _controller: "productoBundle:recepcionDeMercancia:index" }
+
+recepciondemercancia_show:
+    path:     /{id}/show
+    defaults: { _controller: "productoBundle:recepcionDeMercancia:show" }
+
+recepciondemercancia_new:
+    path:     /new
+    defaults: { _controller: "productoBundle:recepcionDeMercancia:new" }
+
+recepciondemercancia_create:
+    path:     /create
+    defaults: { _controller: "productoBundle:recepcionDeMercancia:create" }
+    requirements: { _method: post }
+
+recepciondemercancia_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "productoBundle:recepcionDeMercancia:edit" }
+
+recepciondemercancia_update:
+    path:     /{id}/update
+    defaults: { _controller: "productoBundle:recepcionDeMercancia:update" }
+    requirements: { _method: post|put }
+
+recepciondemercancia_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "productoBundle:recepcionDeMercancia:delete" }
+    requirements: { _method: post|delete }

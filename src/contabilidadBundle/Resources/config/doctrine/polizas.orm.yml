@@ -16,14 +16,12 @@ contabilidadBundle\Entity\polizas:
             length: '10'
         anio:
             type: string
-            length: '10'
-    manyToOne:
-        poliza:
-          targetEntity: contabilidadBundle\Entity\poliza
-          inversedBy: polizas        
-          type: integer
+            length: '10'        
     manyToOne:          
         empresa:
           targetEntity: contabilidadBundle\Entity\empresa
-          inversedBy: polizas     
+          inversedBy: polizas 
+        poliza:
+          targetEntity: contabilidadBundle\Entity\poliza
+          inversedBy: polizas      
     lifecycleCallbacks: {  }

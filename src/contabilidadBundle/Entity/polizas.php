@@ -34,9 +34,9 @@ class polizas
      */
     private $anio;
     
-    protected $poliza;
     
     protected $empresa;
+    protected $poliza;
 
     /**
      * Get id
@@ -161,5 +161,27 @@ class polizas
     public function getEmpresa()
     {
         return $this->empresa;
+    }    
+    /**
+     * Set poliza
+     *
+     * @param \contabilidadBundle\Entity\poliza $poliza
+     * @return polizas
+     */
+    public function setPoliza(\contabilidadBundle\Entity\poliza $poliza = null)
+    {
+        $this->poliza = $poliza;
+
+        return $this;
     }
+
+    /**
+     * Get poliza
+     *
+     * @return \contabilidadBundle\Entity\poliza 
+     */
+    public function getPoliza()
+    {
+        return $this->poliza;
+    }    
 }

@@ -38,7 +38,8 @@ class balanzas
      * @var string
      */
     private $anio;
-
+    protected $empresa;
+    protected $balanza;
 
     /**
      * Get id
@@ -163,5 +164,49 @@ class balanzas
     public function getAnio()
     {
         return $this->anio;
+    }
+    /**
+     * Set empresa
+     *
+     * @param \contabilidadBundle\Entity\empresa $empresa
+     * @return balanzas
+     */
+    public function setEmpresa(\contabilidadBundle\Entity\empresa $empresa = null)
+    {
+        $this->empresa = $empresa;
+
+        return $this;
+    }
+
+    /**
+     * Get empresa
+     *
+     * @return \contabilidadBundle\Entity\empresa 
+     */
+    public function getEmpresa()
+    {
+        return $this->empresa;
+    }
+    /**
+     * Set balanza
+     *
+     * @param \contabilidadBundle\Entity\balanza $balanza
+     * @return balanzas
+     */
+    public function setBalanza(\contabilidadBundle\Entity\balanza $balanza = null)
+    {
+        $this->balanza = $balanza;
+
+        return $this;
+    }
+
+    /**
+     * Get balanza
+     *
+     * @return \contabilidadBundle\Entity\balanza 
+     */
+    public function getBalanza()
+    {
+        return $this->balanza;
     }
 }
