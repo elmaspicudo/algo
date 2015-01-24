@@ -119,10 +119,10 @@ class itemCarrito
     /**
      * Set producto
      *
-     * @param \contenidoBundle\Entity\producto $producto
+     * @param \contenidoBundle\Entity\misProductos $producto
      * @return itemCarrito
      */
-    public function setProducto(\contenidoBundle\Entity\producto $producto = null)
+    public function setProducto(\contenidoBundle\Entity\misProductos $producto = null)
     {
         $this->producto = $producto;
 
@@ -132,7 +132,7 @@ class itemCarrito
     /**
      * Get producto
      *
-     * @return \contenidoBundle\Entity\producto 
+     * @return \contenidoBundle\Entity\misProductos 
      */
     public function getProducto()
     {
@@ -183,5 +183,28 @@ class itemCarrito
     public function getRenta()
     {
         return $this->renta;
+    }
+
+    /**
+     * Set cantidadPeriodo
+     *
+     * @param integer $cantidadPeriodo
+     * @return itemCarrito
+     */
+    public function setCantidadPeriodo($cantidadPeriodo)
+    {
+        $this->cantidadPeriodo = $cantidadPeriodo;
+
+        return $this;
+    }
+
+    /**
+     * Get cantidadPeriodo
+     *
+     * @return integer 
+     */
+    public function getCantidadPeriodo()
+    {
+        return $this->cantidadPeriodo;
     }
 }

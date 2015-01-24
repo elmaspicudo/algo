@@ -18,7 +18,8 @@ class itemCarritoType extends AbstractType
             ->add('cantidad')
             ->add('total')
             ->add('producto')
-            ->add('carrito')
+            ->add('renta')
+            ->add('periodo')
         ;
     }
     

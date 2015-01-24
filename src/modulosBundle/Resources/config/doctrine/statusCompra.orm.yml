@@ -1,4 +1,4 @@
-contenidoBundle\Entity\periodo:
+modulosBundle\Entity\statusCompra:
     type: entity
     table: null
     id:
@@ -10,5 +10,5 @@ contenidoBundle\Entity\periodo:
     fields:
         descripcion:
             type: string
-            length: '50'
+            length: 255
     lifecycleCallbacks: {  }

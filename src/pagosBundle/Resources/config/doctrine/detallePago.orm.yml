@@ -1,0 +1,22 @@
+pagosBundle\Entity\detallePago:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        cantidad:
+            type: integer
+        precio:
+            type: decimal
+        total:
+            type: decimal
+    manyToOne:
+        pago:
+          targetEntity: pagosBundle\Entity\pago
+        producto:
+          targetEntity: dscorpBundle\Entity\producto
+    lifecycleCallbacks: {  }

@@ -1,0 +1,37 @@
+<table width="650" border="0" cellspacing="0" cellpadding="0" align="center" style="background-color:#fff">
+<tbody>
+	<tr>
+		<td>
+			<img src="https://gm1.ggpht.com/EYKmVG-6leex1Gc4F2mneJDcjpzfqb_nVtEI0W6EpeeGDOv_yTMMQbq05iEvQdgg2tuPNOTyvAJF0DfQ0HdrkG6o6HUzCdIXafZ2ZB6wcAg5_9vHpB1M1h5MWmuf6FPCz99FcFDrwzkyDbZzH7-OJndG01-RWCv48bVg17ekisNR4HW-nqqO9BR0-grIxPmTjG__nFoAO35LbLuWdrTrWhW6_4DQF9dNHsNUunIBTcV3Bts0Co5t1EBgMYAZi6iqwyr2MPpbUPHQGucHWFtGaAVFMXd6DCZbbp-qIRgSxXyvHDRAw_meSfs_tEObTayQOmmfYjulAdobQ6fHpyMVkIpc7r3mKCO6FuPoHORGgfLLhxQ_eg3ytHzz1cGiIp9BcwdX196yPc3-dk3dBruKyawAvPV913YPpR82dgXUDs4-aR37IoHgd5s-4xIPmCniN5hpBUNiaj0Pzuvt9cpPJ3M3ok3d11wTqmTBKjQiTGkOb8Th8T_zQagkYWN3tpYZ0bXdUc7mNfC9H6o9dRTBwpYn-Raot1leRpI4G7avCfYBVgDWdXH6tGWSdWI709mDL1J-zyE=w2200-l75-ft" width="650" alt="Sisnet" >
+		</td>
+	</tr>
+	<tr>
+		<td style="text-align: center;">
+			<h2>Realizaron la compra de un producto</h2>
+			<p>El cliente con razon social {{datos.nombre}} realizo un pago en linea por los siguientes productos</p>
+			 {% for line in cartLines %}
+			 		<tr >
+				    <td colspan="2">{{ line.producto }}</td>   
+				    <td>
+				    	
+				    </td>       
+				    <td>
+				   
+				    </td>                
+				    <td>{{ line.cantidad }}</td>           
+				    <td>{{ line.total }}</td>   
+				    <td>{{ line.total * line.cantidad }}</td>       
+				    <td >          
+				    </td>
+				</tr>
+              {% endfor %}   
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<img src="https://gm1.ggpht.com/NT2dQLcK6IULtSk3eNGZx-JMIuHqcs011NDdNtPeuM281i65E5VXv4csijtpQES07thSbumiz6Gcj3kQyXhdY3t4UEW2jz0lfmrYZzgpGTOtzo984Sd6b0nR4c9q0OrvfabDq1hmAouH5gNEy5K3kZHDOAr15xhwnLeiwL6Typ4r5rw5t4IEgl4Ze7WjVVYZCXnjvPXZHGDdlPFekpYdvC1SAXQzAhkR129WRyuL0kiLAjuLpEoKkQPZtgMJp_eP-3x5DObO_SBSaQE3RWkDPwzZeYYudoWGUXU_0-p6NrWKBtHsOQ6UjlPykrQn5tPOEGOGxJSuIMSsIIAgrZm7XGzoZx4WMJ_8UvbT36vMP3EZa5H2ElZ82BBO9Al1YEc6A-CAUMHCBicbn79guHSLt-NzibQNmSPP112m9KGdzuZaR_c2_7EWKvPqoU0qTFq_ZDVh6VbBR23KLQ1IfZWugMzIlIgXD6sKeClice33d0KB1F1wVCjWab79maFRKTNqodQc4eo4Fth0Qttqlxj-vyrlm1BorGuBqnBA-UulNjz03DSMufbcIu1lBhx7C2LfHie6UDGFdA=w2200-l75-ft" width="650" alt="Sisnet">
+		</td>
+	</tr>
+	</tbody>
+</table>
+

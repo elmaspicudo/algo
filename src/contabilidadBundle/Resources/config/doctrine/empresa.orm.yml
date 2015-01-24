@@ -17,5 +17,9 @@ contabilidadBundle\Entity\empresa:
         descripcion:
             type: string
             length: '255'       
+    manyToOne:  
+        productoContratado:
+            targetEntity: modulosBundle\Entity\moduloContratado   
+            inversedBy: empresa
     lifecycleCallbacks: {  }
 

@@ -1,0 +1,59 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>datosFiscales list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Razonsocial</th>
+                <th>Rfc</th>
+                <th>Clienteid</th>
+                <th>Calle</th>
+                <th>Noexterior</th>
+                <th>Nointerior</th>
+                <th>Referencia</th>
+                <th>Colonia</th>
+                <th>Codigopostal</th>
+                <th>Localidad</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('datosfiscales_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.razonSocial }}</td>
+                <td>{{ entity.rfc }}</td>
+                <td>{{ entity.clienteId }}</td>
+                <td>{{ entity.calle }}</td>
+                <td>{{ entity.noExterior }}</td>
+                <td>{{ entity.noInterior }}</td>
+                <td>{{ entity.referencia }}</td>
+                <td>{{ entity.colonia }}</td>
+                <td>{{ entity.codigoPostal }}</td>
+                <td>{{ entity.localidad }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('datosfiscales_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('datosfiscales_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('datosfiscales_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

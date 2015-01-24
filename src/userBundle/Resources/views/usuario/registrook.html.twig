@@ -1,0 +1,96 @@
+{% extends '::base.html.twig' %}
+
+{% block slider %}
+<div class="container">
+<div class="row"><div class="col-xs-12" style="height: 20px;"></div></div>
+    <div class="row form-group">
+        <div class="col-xs-12">
+            <ul class="nav nav-pills nav-justified thumbnail setup-panel">
+                <li class="disabled"><a href="#step-1">
+                    <h4 class="list-group-item-heading">Paso 1</h4>
+                    <p class="list-group-item-text">Resumen de tu pedido</p>
+                </a></li>
+                <li class="active"><a href="#step-2">
+                    <h4 class="list-group-item-heading">Paso 2</h4>
+                    <p class="list-group-item-text">Iniciar Sesion</p>
+                </a></li>
+                <li class="disabled"><a href="#step-3">
+                    <h4 class="list-group-item-heading">Paso 3</h4>
+                    <p class="list-group-item-text">Direccion de facturacion</p>
+                </a></li>
+                <li class="disabled"><a href="#step-3">
+                    <h4 class="list-group-item-heading">Paso 4</h4>
+                    <p class="list-group-item-text">Pagar</p>
+                </a></li>
+            </ul>
+        </div>
+    </div>
+<div class="row"><div class="col-xs-12" ><h2 style="color:red">Gracias por registrarte ahora puedes iniciar sesion</h2></div></div>
+<div class="row setup-content" id="step-1">
+<div class="row">
+ <div class="col-md-12"> 
+        <div class="row">
+            <div class="col-md-6 ">
+                <div class="member-box">
+                <h2>Iniciar sesion</h2>
+                    <form action="{{ path('fos_user_security_check') }}" method="post">
+                        <div class="form-group">
+                            <label for="username">Usuario:</label>
+                            <input id="username" class="form-control" type="text" name="_username" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="hidden" name="_target_path" value="{{ url('carrito_adduser', { 'id': id }) }}" />
+                            <label for="password">Contraseña:</label>
+                            <input id="password" type="password" name="_password" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                             <input type="submit" name="login" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="member-box">
+
+                    <h2>Registro</h2>
+                    
+                    {{ form_start(form) }}
+                    <input type="hidden" name="id_carr" value="{{  id }}" />
+                     <div class="form-group">
+                        {{ form_label(form.nombre) }}
+                        {{ form_errors(form) }}
+                        {{ form_widget(form.nombre, {attr: {'class': 'form-control' }}) }}
+                    </div>
+                     <div class="form-group">
+                        {{ form_label(form.aPaterno) }}
+                        {{ form_errors(form.aPaterno) }}
+                        {{ form_widget(form.aPaterno, {attr: {'class': 'form-control' }}) }}
+                    </div>
+                     <div class="form-group">
+                        {{ form_label(form.aMaterno) }}
+                        {{ form_errors(form.aMaterno) }}
+                        {{ form_widget(form.aMaterno, {attr: {'class': 'form-control' }}) }}
+                    </div>
+                     
+                     <div class="form-group">
+                        {{ form_label(form.username) }}
+                        {{ form_errors(form.username) }}
+                        {{ form_widget(form.username, {attr: {'class': 'form-control' }}) }}
+                    </div>
+                     <div class="form-group">
+                        {{ form_row(form.password) }}
+                    </div>                    
+                     <div class="form-group">
+                        {{ form_row(form.save) }}
+                    </div>              
+                  
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+     </div>
+      
+    </div>
+</div>
+{% endblock  %}

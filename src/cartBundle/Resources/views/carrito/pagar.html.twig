@@ -58,7 +58,7 @@
                         {% for line in cartLines %}
                             <input type="hidden" name="item_number_{{counter}}" value="{{line.id}}">
                             <input type="hidden" name="item_name_{{counter}}" value="{{ line.producto }}">                                                       
-                            <input type="hidden" name="amount_{{counter}}" value="{{ line.cantidad * line.precio}}">
+                            <input type="hidden" name="amount_{{counter}}" value="{{ line.cantidad * line.total}}">
                             <input type="hidden" name="quantity_{{counter}}" value="{{ line.cantidad }}">
                             
                             {% set counter = counter + 1 %}

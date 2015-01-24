@@ -1,0 +1,13 @@
+modulosBundle\Entity\renta:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        descripcion:
+            type: string
+    lifecycleCallbacks: {  }

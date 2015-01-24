@@ -1,0 +1,22 @@
+pagosBundle\Entity\pago:
+    type: entity
+    table: null
+    repositoryClass: pagosBundle\Entity\pagoRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        fecha:
+            type: datetime
+        monto:
+            type: decimal
+        referencia:
+            type: string
+            length: '30'
+    manyToOne:        
+        usuario:
+          targetEntity: dscorpBundle\Entity\usuario
+    lifecycleCallbacks: {  }

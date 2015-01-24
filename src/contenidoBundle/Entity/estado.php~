@@ -5,9 +5,9 @@ namespace contenidoBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * renta
+ * estado
  */
-class renta
+class estado
 {
     /**
      * @var integer
@@ -18,6 +18,11 @@ class renta
      * @var string
      */
     private $descripcion;
+
+    /**
+     * @var \contenidoBundle\Entity\pais
+     */
+    private $pais;
 
 
     /**
@@ -34,7 +39,7 @@ class renta
      * Set descripcion
      *
      * @param string $descripcion
-     * @return renta
+     * @return estado
      */
     public function setDescripcion($descripcion)
     {
@@ -51,5 +56,28 @@ class renta
     public function getDescripcion()
     {
         return $this->descripcion;
+    }
+
+    /**
+     * Set pais
+     *
+     * @param \contenidoBundle\Entity\pais $pais
+     * @return estado
+     */
+    public function setPais(\contenidoBundle\Entity\pais $pais = null)
+    {
+        $this->pais = $pais;
+
+        return $this;
+    }
+
+    /**
+     * Get pais
+     *
+     * @return \contenidoBundle\Entity\pais 
+     */
+    public function getPais()
+    {
+        return $this->pais;
     }
 }

@@ -1,0 +1,68 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>datosFiscales</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Razonsocial</th>
+                <td>{{ entity.razonSocial }}</td>
+            </tr>
+            <tr>
+                <th>Rfc</th>
+                <td>{{ entity.rfc }}</td>
+            </tr>
+            <tr>
+                <th>Clienteid</th>
+                <td>{{ entity.clienteId }}</td>
+            </tr>
+            <tr>
+                <th>Calle</th>
+                <td>{{ entity.calle }}</td>
+            </tr>
+            <tr>
+                <th>Noexterior</th>
+                <td>{{ entity.noExterior }}</td>
+            </tr>
+            <tr>
+                <th>Nointerior</th>
+                <td>{{ entity.noInterior }}</td>
+            </tr>
+            <tr>
+                <th>Referencia</th>
+                <td>{{ entity.referencia }}</td>
+            </tr>
+            <tr>
+                <th>Colonia</th>
+                <td>{{ entity.colonia }}</td>
+            </tr>
+            <tr>
+                <th>Codigopostal</th>
+                <td>{{ entity.codigoPostal }}</td>
+            </tr>
+            <tr>
+                <th>Localidad</th>
+                <td>{{ entity.localidad }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('datosfiscales') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('datosfiscales_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

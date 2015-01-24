@@ -1,16 +1,24 @@
-{% extends '::base.html.twig' %}
+<tr id="trCarrito_{{ entity.id }}">
+ 
+    <td colspan="2">{{ entity.producto }}</td>   
+    <td>
 
-{% block body -%}
-    <h1>itemCarrito edit</h1>
+    	<input type="text" value="1" id="camtiperiodo_{{ entity.id }}" class="form-control elmPeriodo " style="width: 70px;float:left">
+    	
+    	
+    	{{ form_widget (edit_form.periodo,{ 'attr': {'class': 'form-control elmPeriodo tipoperiodo_'~ entity.id ,'style':'width: 120px;', 'unid':'tipoperiodo_' ~ entity.id} }) }}
+    </td>       
+    <td>
+    {{ form_widget (edit_form.renta , { 'attr': {'class': 'form-control elmRenta tiporenta_' ~ entity.id, 'style':'width: 120px;', 'unid':'tiporenta_' ~ entity.id } }) }}
+   
+    </td>                
+    <td>{{ entity.cantidad }}</td>           
+    <td>{{ entity.total }}</td>   
+    <td>{{ entity.total * entity.cantidad }}</td>  
+      
+    <td >   
 
-    {{ form(edit_form) }}
+    	{{ form(delete_form) }}       
+    </td>
+</tr>
 
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('item') }}">
-            Back to the list
-        </a>
-    </li>
-    <li>{{ form(delete_form) }}</li>
-</ul>
-{% endblock %}

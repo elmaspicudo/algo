@@ -21,7 +21,7 @@ cartBundle\Entity\itemCarrito:
         producto:
           targetEntity: contenidoBundle\Entity\misProductos
         periodo:
-          targetEntity: contenidoBundle\Entity\periodo
+          targetEntity: modulosBundle\Entity\periodo
         renta:
-          targetEntity: contenidoBundle\Entity\renta 
+          targetEntity: modulosBundle\Entity\renta 
     lifecycleCallbacks: {  }

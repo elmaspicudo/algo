@@ -1,0 +1,30 @@
+modulosBundle\Entity\moduloContratado:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        fechaCorte:
+            type: datetime
+        fecha:
+            type: datetime
+        cantidadPeriodo:
+            type: integer
+    oneToMany:
+        empresa:
+          targetEntity: contabilidadBundle\Entity\empresa
+          mappedBy: productoContratado
+    manyToOne:        
+        usuario:
+          targetEntity: userBundle\Entity\usuario
+        producto:
+          targetEntity: contenidoBundle\Entity\misProductos
+        periodo:
+          targetEntity: modulosBundle\Entity\periodo
+        renta:
+          targetEntity: modulosBundle\Entity\renta        
+    lifecycleCallbacks: {  }

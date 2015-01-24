@@ -9,6 +9,8 @@ use cartBundle\Entity\carrito;
 use cartBundle\Form\carritoType;
 use userBundle\Entity\usuario;
 use userBundle\Form\usuarioType;
+use modulosBundle\Entity\datosFiscales;
+use modulosBundle\Form\datosFiscalesType;
 /**
  * carrito controller.
  *
@@ -41,31 +43,98 @@ class carritoController extends Controller
         $user = $this->container->get('security.context')->getToken()->getUser();
         //print_r($user);
         if($user=='anon.'){
+          
+           return $this->render('userBundle:usuario:registro.html.twig');
+          
+        }else{
+            $usuario= $em->getRepository('userBundle:usuario')->find($user->getId());
+            $direccion= $em->getRepository('modulosBundle:datosFiscales')->findOneBy(array('usuario'=>$usuario));
+            if(!$direccion){
+                $entity = new datosFiscales();
+                $form   = $this->createdireccionForm($entity);
+
+                return $this->render('modulosBundle:datosFiscales:new.html.twig', array(
+                    'entity' => $entity,
+                    'form'   => $form->createView(),
+                    'elid'   => $id,
+                    'error'   => '',
+                ));
+
+            }else{
+                $editForm = $this->createdireccionForm($direccion);         
+
+                return $this->render('modulosBundle:datosFiscales:edit.html.twig', array(
+                    'entity'      => $direccion,
+                    'form'   => $editForm->createView(),
+                    'error'   => '',
+                    'elid'   => $id,                    
+                ));
+
+            }
+        }
+      
+       
+    }
+
+      /**
+     * revisar si el usuario esta logueado.
+     *
+     */
+    public function pagarAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $user = $this->container->get('security.context')->getToken()->getUser();
+        //print_r($user);
+        if($user=='anon.'){
            $entity = new usuario();
            $form   = $this->CreateFormUser($entity);
 
            return $this->render('userBundle:usuario:registro.html.twig', array(
                 'entity' => $entity,
                 'form'   => $form->createView(),'id'=>$id,
+                'error' => '',
+                
            ));
           
-        }else{
-            $entity = $em->getRepository('cartBundle:carrito')->find($id);
-            if (!$entity) {
-                throw $this->createNotFoundException('Unable to find carrito entity.');
-            }
-            $line=$em->getRepository('cartBundle:itemCarrito')->findBy(array('carrito'=>$entity));
-            //$deleteForm = $this->createDeleteForm($id);
+        }else{              
 
-            return $this->render('cartBundle:carrito:pagar.html.twig', array(
+            $usuario= $em->getRepository('userBundle:usuario')->find($user->getId());
+             $entity = $em->getRepository('cartBundle:carrito')->findOneBy(array('status'=>1,'usuario'=>$usuario));        
+             $line=$em->getRepository('cartBundle:itemCarrito')->findBy(array('carrito'=>$entity));
+             $masked = "C|$id|hola|".$user->getId();
+             $masked = base64_encode($masked);
+             $masked = urlencode($masked);
+             $masked = preg_replace('/=$/','',$masked);
+             $masked = preg_replace('/=$/','',$masked);
+             return $this->render('cartBundle:carrito:pagar.html.twig', array(
                 'entity'      => $entity,
                 'cartLines'   =>$line,
-                'totalItemNumber'=>count($line),
+                'error'   =>'',
+                'totalItemNumber'=>count($line),'masked'=>$masked,
                 //'delete_form' => $deleteForm->createView(),
-            ));      
+            ));     
         }
       
        
+    }
+
+        /**
+     * Creates a form to create a datosFiscales entity.
+     *
+     * @param datosFiscales $entity The entity
+     *
+     * @return \Symfony\Component\Form\Form The form
+     */
+    private function createdireccionForm(datosFiscales $entity)
+    {
+        $form = $this->createForm(new datosFiscalesType(), $entity, array(
+            'action' => $this->generateUrl('datosfiscales_create'),
+            'method' => 'POST',
+        ));
+
+        $form->add('submit', 'submit', array('label' => 'Create'));
+
+        return $form;
     }
 
      /**
@@ -184,7 +253,7 @@ class carritoController extends Controller
             }
             $sessionID = session_id();
             $entity = $em->getRepository('cartBundle:carrito')->findOneBy(array('id'=>$id,'llave'=>$sessionID));        
-            $line=$em->getRepository('cartBundle:itemCarrito')->findItemByCart($entity->getId());
+            $line=$em->getRepository('cartBundle:itemCarrito')->findBy(array('carrito'=>$entity));
             return $this->render('cartBundle:carrito:show.html.twig', array(
                 'entity'      => $entity,
                 'cartLines'   =>$line,
@@ -194,16 +263,12 @@ class carritoController extends Controller
         }else{
              $usuario= $em->getRepository('userBundle:usuario')->find($user->getId());
              $entity = $em->getRepository('cartBundle:carrito')->findOneBy(array('status'=>1,'usuario'=>$usuario));        
-             $line=$em->getRepository('cartBundle:itemCarrito')->findItemByCart($entity->getId());
-             $masked = "C|$id|hola|".$user->getId();
-             $masked = base64_encode($masked);
-             $masked = urlencode($masked);
-             $masked = preg_replace('/=$/','',$masked);
-             $masked = preg_replace('/=$/','',$masked);
-             return $this->render('cartBundle:carrito:pagar.html.twig', array(
+             $line=$em->getRepository('cartBundle:itemCarrito')->findBy(array('carrito'=>$entity));
+            
+             return $this->render('cartBundle:carrito:show.html.twig', array(
                 'entity'      => $entity,
                 'cartLines'   =>$line,
-                'totalItemNumber'=>count($line),'masked'=>$masked,
+                'totalItemNumber'=>count($line),
                 //'delete_form' => $deleteForm->createView(),
             ));     
 

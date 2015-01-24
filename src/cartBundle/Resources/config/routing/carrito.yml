@@ -4,6 +4,9 @@ carrito:
 carrito_checkaut:
     path:     /{id}/check
     defaults: { _controller: "cartBundle:carrito:checkAut" }
+carrito_pagar:
+    path:     /{id}/pagar
+    defaults: { _controller: "cartBundle:carrito:pagar" }
 carrito_adduser:
     path:     /{id}/adduser
     defaults: { _controller: "cartBundle:carrito:adduser" }

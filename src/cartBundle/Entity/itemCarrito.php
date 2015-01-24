@@ -142,10 +142,10 @@ class itemCarrito
     /**
      * Set periodo
      *
-     * @param \contenidoBundle\Entity\periodo $periodo
+     * @param \modulosBundle\Entity\periodo $periodo
      * @return itemCarrito
      */
-    public function setPeriodo(\contenidoBundle\Entity\periodo $periodo = null)
+    public function setPeriodo(\modulosBundle\Entity\periodo $periodo = null)
     {
         $this->periodo = $periodo;
 
@@ -155,7 +155,7 @@ class itemCarrito
     /**
      * Get periodo
      *
-     * @return \contenidoBundle\Entity\periodo 
+     * @return \modulosBundle\Entity\periodo 
      */
     public function getPeriodo()
     {
@@ -165,10 +165,10 @@ class itemCarrito
     /**
      * Set renta
      *
-     * @param \contenidoBundle\Entity\renta $renta
+     * @param \modulosBundle\Entity\renta $renta
      * @return itemCarrito
      */
-    public function setRenta(\contenidoBundle\Entity\renta $renta = null)
+    public function setRenta(\modulosBundle\Entity\renta $renta = null)
     {
         $this->renta = $renta;
 
@@ -178,7 +178,7 @@ class itemCarrito
     /**
      * Get renta
      *
-     * @return \contenidoBundle\Entity\renta 
+     * @return \modulosBundle\Entity\renta 
      */
     public function getRenta()
     {

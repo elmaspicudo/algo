@@ -71,8 +71,8 @@ class itemCarritoController extends Controller
         }
       
         $producto=$em->getRepository('contenidoBundle:misProductos')->find($producto_id);
-        $renta= $em->getRepository('contenidoBundle:renta')->find(2);
-        $periodo= $em->getRepository('contenidoBundle:periodo')->find(2);
+        $renta= $em->getRepository('modulosBundle:renta')->find(2);
+        $periodo= $em->getRepository('modulosBundle:periodo')->find(2);
         $entity = new itemCarrito();
         $entity->setCantidad(1);
         $entity->setCantidadPeriodo(1);

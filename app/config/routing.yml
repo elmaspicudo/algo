@@ -1,3 +1,7 @@
+modulos:
+    resource: "@modulosBundle/Resources/config/routing.yml"
+    prefix:   /
+
 contenido:
     resource: "@contenidoBundle/Resources/config/routing.yml"
     prefix:   /

@@ -1,6 +1,7 @@
 {% extends '::base_pagina.html.twig' %}
 
 {% block productos %}
+<div id="price" class="section secondary-section">
 <div class="container">
 <div class="row">
  <div class="col-md-12"> 
@@ -31,11 +32,7 @@
                         <tbody>
 
                         {% for line in cartLines %}
-
-                            {% include "cartBundle:itemCarrito:show.html.twig" with {
-                                "entity": line,
-                            } %}
-
+                                {{ render(controller( 'cartBundle:itemCarrito:edit', { 'id': line.id } )) }} 
                         {% endfor %}                    
 
                         </tbody>
@@ -64,5 +61,6 @@
 
     {% endif %}
 
+</div>
 </div>
     {% endblock %}

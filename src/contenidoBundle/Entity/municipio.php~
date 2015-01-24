@@ -5,9 +5,9 @@ namespace contenidoBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * periodo
+ * municipio
  */
-class periodo
+class municipio
 {
     /**
      * @var integer
@@ -18,6 +18,11 @@ class periodo
      * @var string
      */
     private $descripcion;
+
+    /**
+     * @var \contenidoBundle\Entity\estado
+     */
+    private $estado;
 
 
     /**
@@ -34,7 +39,7 @@ class periodo
      * Set descripcion
      *
      * @param string $descripcion
-     * @return periodo
+     * @return municipio
      */
     public function setDescripcion($descripcion)
     {
@@ -51,5 +56,28 @@ class periodo
     public function getDescripcion()
     {
         return $this->descripcion;
+    }
+
+    /**
+     * Set estado
+     *
+     * @param \contenidoBundle\Entity\estado $estado
+     * @return municipio
+     */
+    public function setEstado(\contenidoBundle\Entity\estado $estado = null)
+    {
+        $this->estado = $estado;
+
+        return $this;
+    }
+
+    /**
+     * Get estado
+     *
+     * @return \contenidoBundle\Entity\estado 
+     */
+    public function getEstado()
+    {
+        return $this->estado;
     }
 }

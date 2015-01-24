@@ -1,4 +1,4 @@
-contenidoBundle\Entity\renta:
+modulosBundle\Entity\periodo:
     type: entity
     table: null
     id:
@@ -10,4 +10,5 @@ contenidoBundle\Entity\renta:
     fields:
         descripcion:
             type: string
+            length: '50'
     lifecycleCallbacks: {  }
