@@ -1,0 +1,46 @@
+modulosBundle\Entity\datosFiscales:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        razonSocial:
+            type: string
+            length: 255
+        rfc:
+            type: string
+            length: '13'
+        calle:
+            type: string
+            length: '120'
+        noExterior:
+            type: string
+            length: '40'
+        noInterior:
+            type: string
+            length: '40'
+        referencia:
+            type: string
+            length: 255
+        colonia:
+            type: string
+            length: '120'
+        codigoPostal:
+            type: integer
+        localidad:
+            type: string
+            length: '120'
+    manyToOne:       
+        municipio:
+            targetEntity: contenidoBundle\Entity\municipio
+        estado:
+            targetEntity: contenidoBundle\Entity\estado
+        pais:
+            targetEntity: contenidoBundle\Entity\pais
+        usuario:
+            targetEntity: userBundle\Entity\usuario
+    lifecycleCallbacks: {  }

@@ -1,0 +1,7 @@
+modulos_datosfiscales:
+    resource: "@modulosBundle/Resources/config/routing/datosfiscales.yml"
+    prefix:   /datosfiscales
+
+modulos_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: modulosBundle:Default:index }

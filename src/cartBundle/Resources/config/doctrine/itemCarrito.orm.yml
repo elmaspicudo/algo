@@ -1,0 +1,27 @@
+cartBundle\Entity\itemCarrito:
+    type: entity
+    table: null
+    repositoryClass: cartBundle\Entity\itemCarritoRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        cantidad:
+            type: integer
+        total:
+            type: decimal
+        cantidadPeriodo:
+            type: integer
+    manyToOne:
+        carrito:
+          targetEntity: cartBundle\Entity\carrito
+        producto:
+          targetEntity: contenidoBundle\Entity\misProductos
+        periodo:
+          targetEntity: modulosBundle\Entity\periodo
+        renta:
+          targetEntity: modulosBundle\Entity\renta 
+    lifecycleCallbacks: {  }

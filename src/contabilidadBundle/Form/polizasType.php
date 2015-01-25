@@ -19,6 +19,7 @@ class polizasType extends AbstractType
             ->add('empresa')
             ->add('mes')
             ->add('anio')
+            ->add('rfc')
         ;
     }
     

@@ -1,0 +1,24 @@
+<tr id="trCarrito_{{ entity.id }}">
+ 
+    <td colspan="2">{{ entity.producto }}</td>   
+    <td>
+
+    	<input type="text" value="1" id="camtiperiodo_{{ entity.id }}" class="form-control elmPeriodo " style="width: 70px;float:left">
+    	
+    	
+    	{{ form_widget (edit_form.periodo,{ 'attr': {'class': 'form-control elmPeriodo tipoperiodo_'~ entity.id ,'style':'width: 120px;', 'unid':'tipoperiodo_' ~ entity.id} }) }}
+    </td>       
+    <td>
+    {{ form_widget (edit_form.renta , { 'attr': {'class': 'form-control elmRenta tiporenta_' ~ entity.id, 'style':'width: 120px;', 'unid':'tiporenta_' ~ entity.id } }) }}
+   
+    </td>                
+    <td>{{ entity.cantidad }}</td>           
+    <td>{{ entity.total }}</td>   
+    <td>{{ entity.total * entity.cantidad }}</td>  
+      
+    <td >   
+
+    	{{ form(delete_form) }}       
+    </td>
+</tr>
+

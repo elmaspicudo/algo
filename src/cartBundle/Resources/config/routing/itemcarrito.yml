@@ -1,0 +1,29 @@
+item:
+    path:     /
+    defaults: { _controller: "cartBundle:itemCarrito:index" }
+
+item_show:
+    path:     /{id}/show
+    defaults: { _controller: "cartBundle:itemCarrito:show" }
+
+item_new:
+    path:     /new
+    defaults: { _controller: "cartBundle:itemCarrito:new" }
+
+item_create:
+    path:     /add/{producto_id}
+    defaults: { _controller: "cartBundle:itemCarrito:add" }
+    
+item_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "cartBundle:itemCarrito:edit" }
+
+item_update:
+    path:     /{id}/update
+    defaults: { _controller: "cartBundle:itemCarrito:update" }
+    requirements: { _method: post|put }
+
+item_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "cartBundle:itemCarrito:delete" }
+    requirements: { _method: post|delete }

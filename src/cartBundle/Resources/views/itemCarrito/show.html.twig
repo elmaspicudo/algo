@@ -1,0 +1,21 @@
+<tr id="trCarrito_{{ entity.id }}">
+    <td colspan="2">{{ entity.producto }}</td>   
+    <td>
+    	<input type="text" value="1" id="camtiperiodo_{{ entity.id }}" class="form-control elmPeriodo" style="width: 70px;float:left">
+    	<select id="tipoperiodo_{{ entity.id }}" class="form-control elmPeriodo" style="width: 120px;float:left">
+    		 <option value="1">Mes</option>
+    		 <option selected="selected" value="2">Año</option>
+    	</select>  
+    </td>       
+    <td>
+    <select id="tiporenta_{{ entity.id }}" class="form-control elmRenta" style="width: 120px;">
+    		 <option value="1">Mensual</option>
+    		 <option selected="selected" value="2">Anual</option>
+    	</select> 
+    </td>                
+    <td>{{ entity.cantidad }}</td>           
+    <td>{{ entity.total }}</td>   
+    <td>{{ entity.total * entity.cantidad }}</td>       
+    <td >          
+    </td>
+</tr>

@@ -1,0 +1,66 @@
+{% extends '::base_pagina.html.twig' %}
+
+{% block productos %}
+<div id="price" class="section secondary-section">
+<div class="container">
+<div class="row">
+ <div class="col-md-12"> 
+    {% if totalItemNumber > 0 %}
+        {{ 'Tus Productos'|trans }}
+    {% else %}
+        {{ 'Aun no tienes productos!'|trans }}
+    {% endif %}
+</div >
+</div >
+
+    <!-- Basket -->
+
+    {% if totalItemNumber > 0 %}
+        <div class="row">
+            <div class="col-md-12">               
+                    <table class="basket-table">
+                        <thead>
+                        <tr>
+                            <th colspan="2">Producto</th>
+                            <th>Periodo</th>
+                            <th>Tipo de pago</th>
+                            <th>Cantidad</th>
+                            <th>Precio</th>
+                            <th colspan="2">Total</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        {% for line in cartLines %}
+                                {{ render(controller( 'cartBundle:itemCarrito:edit', { 'id': line.id } )) }} 
+                        {% endfor %}                    
+
+                        </tbody>
+                    </table>
+
+                    <div class="clearfix">
+
+                        <p class="basket-total"><span>Total: </span></p>
+
+                    </div>
+
+                    <p class="actions">
+                        <a class="btn btn-blank" href="">{{ 'Continue shopping'|trans }}</a>
+                        <a class="btn btn-blank" href="">{{ 'Empty basket'|trans }}</a>                        
+                        <a class="btn btn-primary" href="{{path('carrito_checkaut', { 'id': entity.id })}}">{{ 'Pagar' }}</a>
+                    </p>
+
+            </div>
+        </div>
+
+        
+
+        <!-- Related products -->
+
+       
+
+    {% endif %}
+
+</div>
+</div>
+    {% endblock %}

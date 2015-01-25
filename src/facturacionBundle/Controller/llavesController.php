@@ -25,10 +25,10 @@ class llavesController extends Controller
         $entity = new llaves();
         $formulario   = $this->createCreateForm($entity);
         $entities = $em->getRepository('facturacionBundle:llaves')->findAll();
-
         return $this->render('facturacionBundle:llaves:index.html.twig', array(
             'entities' => $entities,
             'formulario'   => $formulario->createView(),
+
         ));
     }
     /**

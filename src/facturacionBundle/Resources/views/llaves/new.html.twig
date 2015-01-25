@@ -1,5 +1,50 @@
 {{ form_start(form) }}
   	<div class="control-group">
+<<<<<<< HEAD
+        {{ form_label(form.cliente) }}
+      	<div class="controls">
+      		   {{ form_widget(form.cliente) }}
+      	</div>
+      	<div class="controls-errors">
+	    	  {{ form_errors(form.cliente) }}
+	    </div>
+	</div>
+	<div class="row-fluid">
+		<div class="span3">
+			<div class="control-group">
+		        {{ form_label(form.tipo) }}
+		      	<div class="controls">
+		      		   {{ form_widget(form.tipo) }}
+		      	</div>
+		      	<div class="controls-errors">
+			    	  {{ form_errors(form.tipo) }}
+			    </div>
+			</div>
+		</div>
+		<div class="span3">
+			<div class="control-group">
+		        {{ form_label(form.nombre) }}
+		      	<div class="controls">
+		      		   {{ form_widget(form.nombre) }}
+		      	</div>
+		      	<div class="controls-errors">
+			    	  {{ form_errors(form.nombre) }}
+			    </div>
+			</div>
+		</div>
+		<div class="span3">
+			<div class="control-group">
+		        {{ form_label(form.contenido) }}
+		      	<div class="controls">
+		      		   {{ form_widget(form.contenido) }}
+		      	</div>
+		      	<div class="controls-errors">
+			    	  {{ form_errors(form.contenido) }}
+			    </div>
+			</div>
+		</div>
+		
+=======
         {{ form_label(form.contenido) }}
       	<div class="controls">
       		   {{ form_widget(form.contenido) }}
@@ -9,6 +54,7 @@
 	    </div>
 	</div>
 	
+>>>>>>> 004662bf2b83e823599114391e41e0d4a064357b
 </div>
 <div class="form-actions">
 	<button type="submit" class="btn btn-primary">Guardar cambios</button>

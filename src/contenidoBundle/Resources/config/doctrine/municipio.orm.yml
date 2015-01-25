@@ -1,0 +1,18 @@
+contenidoBundle\Entity\municipio:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        descripcion:
+            type: string
+            length: '40'
+    manyToOne:
+        estado:
+          targetEntity: contenidoBundle\Entity\estado
+          inversedBy: municipio        
+    lifecycleCallbacks: {  }

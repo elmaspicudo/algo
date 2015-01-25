@@ -1,0 +1,30 @@
+datosfiscales:
+    path:     /
+    defaults: { _controller: "modulosBundle:datosFiscales:index" }
+
+datosfiscales_show:
+    path:     /{id}/show
+    defaults: { _controller: "modulosBundle:datosFiscales:show" }
+
+datosfiscales_new:
+    path:     /new
+    defaults: { _controller: "modulosBundle:datosFiscales:new" }
+
+datosfiscales_create:
+    path:     /create
+    defaults: { _controller: "modulosBundle:datosFiscales:create" }
+    requirements: { _method: post }
+
+datosfiscales_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "modulosBundle:datosFiscales:edit" }
+
+datosfiscales_update:
+    path:     /{id}/update
+    defaults: { _controller: "modulosBundle:datosFiscales:update" }
+    requirements: { _method: post|put }
+
+datosfiscales_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "modulosBundle:datosFiscales:delete" }
+    requirements: { _method: post|delete }

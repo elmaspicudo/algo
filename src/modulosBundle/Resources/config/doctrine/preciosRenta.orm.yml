@@ -1,0 +1,20 @@
+modulosBundle\Entity\preciosRenta:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        precio:
+            type: decimal
+    manyToOne:
+        producto:
+          targetEntity: contenidoBundle\Entity\misProductos
+          inversedBy: precios 
+        renta:
+          targetEntity: modulosBundle\Entity\renta
+          inversedBy: precios
+    lifecycleCallbacks: {  }

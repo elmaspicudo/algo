@@ -1,0 +1,14 @@
+cart_item:
+    resource: "@cartBundle/Resources/config/routing/itemcarrito.yml"
+    prefix:   /item
+
+cart_carrito:
+    resource: "@cartBundle/Resources/config/routing/carrito.yml"
+    prefix:   /carrito
+cart_paypal:
+    resource: "@cartBundle/Resources/config/routing/paypal.yml"
+    prefix:   /paypal
+
+cart_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: cartBundle:Default:index }

@@ -23,6 +23,7 @@ class archivosController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $entity = new archivos();
+
         $formulario   = $this->createCreateForm($entity);
         $entities = $em->getRepository('facturacionBundle:archivos')->findAll();
 

@@ -1,3 +1,18 @@
+modulos:
+    resource: "@modulosBundle/Resources/config/routing.yml"
+    prefix:   /
+
+contenido:
+    resource: "@contenidoBundle/Resources/config/routing.yml"
+    prefix:   /
+
+admin:
+    resource: "@adminBundle/Resources/config/routing.yml"
+    prefix:   /
+
+user:
+    resource: "@userBundle/Resources/config/routing.yml"
+
 producto:
     resource: "@productoBundle/Resources/config/routing.yml"
     prefix:   /
@@ -9,7 +24,26 @@ facturacion:
 conta:
     resource: "@contabilidadBundle/Resources/config/routing.yml"
     prefix:   /
+    
+fos_user_security:
+    resource: "@FOSUserBundle/Resources/config/routing/security.xml"
 
-app:
-    resource: @AppBundle/Controller/
-    type:     annotation
+fos_user_profile:
+    resource: "@FOSUserBundle/Resources/config/routing/profile.xml"
+    prefix: /profile
+
+fos_user_register:
+    resource: "@FOSUserBundle/Resources/config/routing/registration.xml"
+    prefix: /registro
+
+fos_user_resetting:
+    resource: "@FOSUserBundle/Resources/config/routing/resetting.xml"
+    prefix: /resetting
+
+fos_user_change_password:
+    resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
+    prefix: /profile
+
+cart:
+    resource: "@cartBundle/Resources/config/routing.yml"
+    prefix:   /

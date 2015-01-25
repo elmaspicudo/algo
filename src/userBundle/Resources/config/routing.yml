@@ -1,0 +1,10 @@
+user_usuario:
+    resource: "@userBundle/Resources/config/routing/usuario.yml"
+    prefix:   /usuario
+usuario_direccion:
+    path:     /direccion
+    defaults: { _controller: "dscorpBundle:usuario:direccion" }
+
+user_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: userBundle:Default:index }

@@ -1,0 +1,15 @@
+paypal:
+    path:     /
+    defaults: { _controller: "cartBundle:Paypal:index" }
+paypal_exito:
+    path:     /{masked}/exito
+    defaults: { _controller: "cartBundle:Paypal:exito" }
+
+paypal_cancel:
+    path:     /cancel
+    defaults: { _controller: "cartBundle:Paypal:cancel" }
+
+paypal_notify:
+    path:     /notificacion
+    defaults: { _controller: "cartBundle:Paypal:notify" }
+    requirements: { _method: post }

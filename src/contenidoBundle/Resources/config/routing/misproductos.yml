@@ -1,0 +1,30 @@
+misproductos:
+    path:     /
+    defaults: { _controller: "contenidoBundle:misProductos:index" }
+
+misproductos_show:
+    path:     /{id}/show
+    defaults: { _controller: "contenidoBundle:misProductos:show" }
+
+misproductos_new:
+    path:     /new
+    defaults: { _controller: "contenidoBundle:misProductos:new" }
+
+misproductos_create:
+    path:     /create
+    defaults: { _controller: "contenidoBundle:misProductos:create" }
+    requirements: { _method: post }
+
+misproductos_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "contenidoBundle:misProductos:edit" }
+
+misproductos_update:
+    path:     /{id}/update
+    defaults: { _controller: "contenidoBundle:misProductos:update" }
+    requirements: { _method: post|put }
+
+misproductos_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "contenidoBundle:misProductos:delete" }
+    requirements: { _method: post|delete }

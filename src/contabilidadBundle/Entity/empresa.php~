@@ -107,4 +107,32 @@ class empresa
     {
         return $this->descripcion;
     }
+    /**
+     * @var \modulosBundle\Entity\moduloContratado
+     */
+    private $productoContratado;
+
+
+    /**
+     * Set productoContratado
+     *
+     * @param \modulosBundle\Entity\moduloContratado $productoContratado
+     * @return empresa
+     */
+    public function setProductoContratado(\modulosBundle\Entity\moduloContratado $productoContratado = null)
+    {
+        $this->productoContratado = $productoContratado;
+
+        return $this;
+    }
+
+    /**
+     * Get productoContratado
+     *
+     * @return \modulosBundle\Entity\moduloContratado 
+     */
+    public function getProductoContratado()
+    {
+        return $this->productoContratado;
+    }
 }

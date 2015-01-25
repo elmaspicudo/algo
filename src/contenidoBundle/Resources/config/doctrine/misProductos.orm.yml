@@ -1,0 +1,22 @@
+contenidoBundle\Entity\misProductos:
+    type: entity
+    table: null
+    repositoryClass: contenidoBundle\Entity\misProductosRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nombre:
+            type: string
+            length: '40'
+        descripcion:
+            type: string
+            length: '70'
+        contenido:
+            type: text
+        precio:
+            type: decimal
+    lifecycleCallbacks: {  }

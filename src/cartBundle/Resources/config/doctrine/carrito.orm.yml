@@ -1,0 +1,20 @@
+cartBundle\Entity\carrito:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        llave:
+            type: string
+            length: '35'
+        status:
+            type: integer
+    manyToOne:
+        usuario:
+          targetEntity: userBundle\Entity\usuario
+          inversedBy: carrito
+    lifecycleCallbacks: {  }
