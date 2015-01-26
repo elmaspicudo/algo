@@ -18,5 +18,5 @@ pagosBundle\Entity\detallePago:
         pago:
           targetEntity: pagosBundle\Entity\pago
         producto:
-          targetEntity: dscorpBundle\Entity\producto
+          targetEntity: contenidoBundle\Entity\misProductos
     lifecycleCallbacks: {  }

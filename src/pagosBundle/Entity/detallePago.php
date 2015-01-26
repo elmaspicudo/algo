@@ -138,10 +138,10 @@ class detallePago
     /**
      * Set producto
      *
-     * @param \dscorpBundle\Entity\producto $producto
+     * @param \contenidoBundle\Entity\misProductos $producto
      * @return detallePago
      */
-    public function setProducto(\dscorpBundle\Entity\producto $producto = null)
+    public function setProducto(\contenidoBundle\Entity\misProductos $producto = null)
     {
         $this->producto = $producto;
 
@@ -151,7 +151,7 @@ class detallePago
     /**
      * Get producto
      *
-     * @return \dscorpBundle\Entity\producto 
+     * @return \contenidoBundle\Entity\misProductos 
      */
     public function getProducto()
     {

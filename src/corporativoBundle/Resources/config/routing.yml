@@ -1,0 +1,3 @@
+corporativo_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: corporativoBundle:Default:index }

@@ -1,3 +1,7 @@
+corporativo:
+    resource: "@corporativoBundle/Resources/config/routing.yml"
+    prefix:   /
+
 modulos:
     resource: "@modulosBundle/Resources/config/routing.yml"
     prefix:   /

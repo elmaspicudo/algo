@@ -6,7 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use cartBundle\Entity\carrito;
 use pagosBundle\Entity\pago;
 use pagosBundle\Entity\detallePago;
-use adminBundle\Entity\productoContratado;
+use modulosBundle\Entity\moduloContratado;
 
 class PaypalController extends Controller
 {
@@ -23,7 +23,7 @@ class PaypalController extends Controller
     	$track = base64_decode($masked);
     	echo $track;
 		@list($oper,$carrito,$llave,$userid) = explode('|',$track);
-		$usuario= $em->getRepository('dscorpBundle:usuario')->find($userid);
+		$usuario= $em->getRepository('userBundle:usuario')->find($userid);
         $entity = $em->getRepository('cartBundle:carrito')->findOneBy(array('id'=>$carrito,'usuario'=>$usuario)); 
         $entity->setStatus(2);
         $em->persist($entity);
@@ -110,7 +110,7 @@ class PaypalController extends Controller
     private function addPagoAndProductocontratado(&$carrito){
     	$em = $this->getDoctrine()->getManager();
         $user = $this->container->get('security.context')->getToken()->getUser();
-        $usuario= $em->getRepository('dscorpBundle:usuario')->find($user->getId());
+        $usuario= $em->getRepository('userBundle:usuario')->find($user->getId());
         if($usuario){
 	    	$lines=$em->getRepository('cartBundle:itemCarrito')->findBy(array('carrito'=>$carrito));
 	    	$fecha=new \DateTime("now");
@@ -132,7 +132,7 @@ class PaypalController extends Controller
 	    		$em->persist($entidaDetalle);
            		$em->flush();
 
-				$entidadProducto=new productoContratado();
+				$entidadProducto=new moduloContratado();
 				$entidadProducto->setFechaCorte($fecha);
 				$entidadProducto->setFecha($fecha);
 				$entidadProducto->setUsuario($usuario);

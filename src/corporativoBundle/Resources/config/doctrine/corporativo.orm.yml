@@ -1,0 +1,16 @@
+corporativoBundle\Entity\corporativo:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nombre:
+            type: string
+            length: '60'
+        descripcion:
+            type: text
+    lifecycleCallbacks: {  }

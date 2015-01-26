@@ -18,5 +18,5 @@ pagosBundle\Entity\pago:
             length: '30'
     manyToOne:        
         usuario:
-          targetEntity: dscorpBundle\Entity\usuario
+          targetEntity: userBundle\Entity\usuario
     lifecycleCallbacks: {  }

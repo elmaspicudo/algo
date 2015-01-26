@@ -113,10 +113,10 @@ class pago
     /**
      * Set usuario
      *
-     * @param \dscorpBundle\Entity\usuario $usuario
+     * @param \userBundle\Entity\usuario $usuario
      * @return pago
      */
-    public function setUsuario(\dscorpBundle\Entity\usuario $usuario = null)
+    public function setUsuario(\userBundle\Entity\usuario $usuario = null)
     {
         $this->usuario = $usuario;
 
@@ -126,7 +126,7 @@ class pago
     /**
      * Get usuario
      *
-     * @return \dscorpBundle\Entity\usuario 
+     * @return \userBundle\Entity\usuario 
      */
     public function getUsuario()
     {
