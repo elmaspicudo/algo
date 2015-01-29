@@ -1,0 +1,20 @@
+configuracionBundle\Entity\corporativo:
+    type: entity
+    table: null
+    repositoryClass: configuracionBundle\Entity\corporativoRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nombre:
+            type: string
+            length: '100'
+        descripcion:
+            type: string
+            length: '120'
+        limiteEmpresa:
+            type: integer
+    lifecycleCallbacks: {  }

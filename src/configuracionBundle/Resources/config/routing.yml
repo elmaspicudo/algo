@@ -1,0 +1,7 @@
+configuracion_corporativo:
+    resource: "@configuracionBundle/Resources/config/routing/corporativo.yml"
+    prefix:   /corporativo
+
+configuracion_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: configuracionBundle:Default:index }

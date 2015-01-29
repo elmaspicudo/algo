@@ -1,0 +1,30 @@
+corporativo:
+    path:     /
+    defaults: { _controller: "configuracionBundle:corporativo:index" }
+
+corporativo_show:
+    path:     /{id}/show
+    defaults: { _controller: "configuracionBundle:corporativo:show" }
+
+corporativo_new:
+    path:     /new
+    defaults: { _controller: "configuracionBundle:corporativo:new" }
+
+corporativo_create:
+    path:     /create
+    defaults: { _controller: "configuracionBundle:corporativo:create" }
+    requirements: { _method: post }
+
+corporativo_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "configuracionBundle:corporativo:edit" }
+
+corporativo_update:
+    path:     /{id}/update
+    defaults: { _controller: "configuracionBundle:corporativo:update" }
+    requirements: { _method: post|put }
+
+corporativo_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "configuracionBundle:corporativo:delete" }
+    requirements: { _method: post|delete }

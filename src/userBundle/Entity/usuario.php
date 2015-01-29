@@ -17,6 +17,8 @@ class usuario extends BaseUser
      */
     protected $id;
 
+    protected $corporativo;
+
     public function __construct()
     {
         parent::__construct();
